@@ -1,0 +1,9 @@
+.venv
+*.pyc
+data
+staticfiles
+.env
+db.sqlite3
+getting-started/*
+.DS_Store
+client_secret.json

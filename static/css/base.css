@@ -1,0 +1,16 @@
+:root {
+  --text: #333;
+  --bg: white;
+  --blue: steelblue;
+}
+
+body {
+  color: var(--text);
+  font: 1rem/1.2 "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, "helvetica neue", helvetica, sans-serif;
+  letter-spacing: 0.04em;
+  background-color: var(--bg);
+}
+
+p {
+  max-width: 35em;
+}
