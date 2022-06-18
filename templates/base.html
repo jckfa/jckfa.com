@@ -6,24 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <meta name="description" content="">
+  <meta name="description" content="{% block desc %}A graphic designer and type designer, with strong literacy in frontend and backend software development.{% endblock %}">
   <!-- <meta name="theme-color" content="ffff00"> -->
   <!-- <link rel="shortcut icon" href=""> -->
   <!-- <link rel="apple-touch-icon" href=""> -->
   <!-- <link rel="manifest" href=""> -->
 
-  <title>{% block title %}{% endblock %}</title>
+  <title>{% block title %}Jack Halten Fahnestock{% endblock %}</title>
 
   <meta property="og:title" content="{{ self.title() }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="">
+  <meta property="og:url" content="https://jackf.me">
   <!-- <meta property="og:image" content=""> -->
   <meta property="og:site_name" content="{{ self.title() }}">
-  <meta property="og:description" content="">
+  <meta property="og:description" content="{{ self.desc() }}">
 
-  <!-- CSS -->
+  <!-- BASE CSS -->
   <link rel="stylesheet" href={{url_for("static", filename="css/reset.css")}}>
   <link rel="stylesheet" href={{url_for("static", filename="css/base.css")}}>
+
+  <!-- Additional assets (if any) -->
   {% endblock %}
 </head>
 <body>
@@ -43,6 +45,20 @@
   </footer>
   
   {% block scripts %}
+  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script>
+    // init Packery
+    var grid = document.querySelector('.grid');
+    var pckry = new Packery(grid, {
+      itemSelector: '.grid-item',
+      percentPosition: true });
+
+    // layout Packery after each image loads
+    imagesLoaded(grid).on('progress', function () {
+      pckry.layout();
+    });
+  </script>
   {% endblock %}
 </body>
 </html>

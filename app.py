@@ -5,7 +5,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def encoder():
-  return render_template('index.html')
+  work_list = []
+  for filename in os.listdir('static/img'):
+    if filename.endswith(".jpg"):
+      work_list.append(filename)
+    else:
+      continue
+  return render_template('index.html', work_list = work_list)
 
 @app.errorhandler(404)
 def page_not_found(e):

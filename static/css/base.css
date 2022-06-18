@@ -1,14 +1,29 @@
 :root {
-  --text: #333;
-  --bg: white;
+  --text: black;
+  --bg: #fc0;
   --blue: steelblue;
 }
 
 body {
   color: var(--text);
-  font: 1rem/1.2 "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, "helvetica neue", helvetica, sans-serif;
-  letter-spacing: 0.04em;
-  background-color: var(--bg);
+  /* font: 1rem/1.2 "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, "helvetica neue", helvetica, sans-serif; */
+  font: 1.2rem/1.2 arial, 'helvetica neue', helvetica, sans-serif;
+  /* letter-spacing: 0.04em; */
+  background: var(--bg);
+  hyphens: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0.25em;
+}
+
+  @media only screen and (min-width: 640px) {
+    body {font-size: 2rem;}
+  }
+
+a {
+  color: currentColor;
 }
 
 p {

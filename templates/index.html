@@ -6,5 +6,11 @@
 {% endblock %}
 
 {% block main %}
-index
+  <div class="grid">
+    {% for filename in work_list %}
+      <div class="grid-item">
+        <img src="static/img/{{filename}}" alt=""/>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
