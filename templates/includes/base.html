@@ -44,6 +44,7 @@
   
   {% block scripts %}
   <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+  <!-- <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script> -->
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script>
     // init Packery
@@ -51,6 +52,12 @@
     var pckry = new Packery(grid, {
       itemSelector: '.grid-item',
       percentPosition: true });
+
+    // init Draggabilly
+    pckry.getItemElements().forEach( function( itemElem ) {
+      var draggie = new Draggabilly( itemElem );
+      pckry.bindDraggabillyEvents( draggie );
+    });
 
     // layout Packery after each image loads
     imagesLoaded(grid).on('progress', function () {
