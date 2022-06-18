@@ -15,7 +15,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
-  padding: 0.25em;
 }
 
   @media only screen and (min-width: 640px) {
@@ -26,6 +25,33 @@ a {
   color: currentColor;
 }
 
-p {
+i {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+header, footer {
+  padding: 0 0.5em;
+  background-color: white;
+}
+
+footer {
+  color: var(--bg);
+  background-color: var(--text);
+}
+
+header, main {
+  /* margin-bottom: 1em; */
+}
+
+main {
+  padding: 0.375em 0.25em;
+}
+
+main p {
   max-width: 35em;
+  padding: 0.125em 0.25em;
 }

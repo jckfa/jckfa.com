@@ -12,7 +12,7 @@
   <!-- <link rel="apple-touch-icon" href=""> -->
   <!-- <link rel="manifest" href=""> -->
 
-  <title>{% block title %}Jack Halten Fahnestock{% endblock %}</title>
+  <title>{% block title %}Jack Fahnestock{% endblock %}</title>
 
   <meta property="og:title" content="{{ self.title() }}">
   <meta property="og:type" content="website">
@@ -24,25 +24,23 @@
   <!-- BASE CSS -->
   <link rel="stylesheet" href={{url_for("static", filename="css/reset.css")}}>
   <link rel="stylesheet" href={{url_for("static", filename="css/base.css")}}>
+  <link rel="stylesheet" href={{url_for("static", filename="css/nav.css")}}>
+  <!-- <link rel="stylesheet" href={{url_for("static", filename="css/header.css")}}> -->
+  <!-- <link rel="stylesheet" href={{url_for("static", filename="css/footer.css")}}> -->
 
   <!-- Additional assets (if any) -->
   {% endblock %}
 </head>
 <body>
-  <header>
-    {% block header %}
-    {% endblock %}
-  </header>
+  {% include 'includes/_nav.html' %}
+  <!-- {% include 'includes/_header.html' %} -->
 
   <main>
     {% block main %}
     {% endblock %}
   </main>
-  
-  <footer>
-    {% block footer %}
-    {% endblock %}
-  </footer>
+
+  {% include 'includes/_footer.html' %}
   
   {% block scripts %}
   <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>

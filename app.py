@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def encoder():
+def index():
   work_list = []
   for filename in os.listdir('static/img'):
     if filename.endswith(".jpg"):
@@ -12,6 +12,10 @@ def encoder():
     else:
       continue
   return render_template('index.html', work_list = work_list)
+
+@app.route('/about')
+def about():
+  return render_template('about.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
