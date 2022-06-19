@@ -1,27 +1,34 @@
-from flask import Flask, redirect, render_template, url_for
+from flask import Flask, render_template, url_for, make_response
 import os
 # import pandas as pd
 app = Flask(__name__)
+app.debug = True
+
+# if __name__ == "__main__":
+#   app.run(debug=True)
 
 @app.route('/')
 def index():
-  work_list = []
-  for filename in os.listdir('static/img'):
-    if filename.endswith(".jpg"):
-      work_list.append(filename)
-    else:
-      continue
-  return render_template('index.html', work_list = work_list)
+  path = "static/img"
+  fname = []
+  for root, d_names, f_names in os.walk(path):
+    for f in f_names:
+      fname.append(os.path.join(root, f))
+  return render_template('index.html', work_list = fname)
 
 @app.route('/about')
 def about():
   return render_template('about.html')
 
+@app.route('/project/<project>')
+def project(project):
+  # if project exists
+  return render_template('project.html', project = project)
+  # else return 404
+
 @app.errorhandler(404)
-def page_not_found(e):
-    return redirect('/')
-if __name__ == "__main__":
-  app.run(debug=True)
+def page_not_found(error):
+  return render_template('error.html'), 404
 
 # add last modified timestamp to fix browser caching of old assets
 @app.context_processor

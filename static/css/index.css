@@ -1,14 +1,3 @@
-main img {
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 200ms var(--anim);
-}
-
-  main img:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-  }
-
 .grid {
   width: 100%;
   /* background-color: red; */
@@ -33,13 +22,22 @@ main img {
   }
 
   .grid-item img {
-    transition: transform 200ms var(--anim);
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow, transform 200ms var(--anim);
   }
 
-    .grid-item img:hover {
+    .grid-item:hover img {
       transform: scale(1.2);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     }
 
   .caption {
+    width: 100%;
     font-size: 0.8em;
+    /* background-color: gray; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }

@@ -45,6 +45,7 @@
   {% block scripts %}
   <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
   <!-- <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script> -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script>
     // init Packery
@@ -57,6 +58,14 @@
     pckry.getItemElements().forEach( function( itemElem ) {
       var draggie = new Draggabilly( itemElem );
       pckry.bindDraggabillyEvents( draggie );
+    });
+
+    // init Isotope
+    var elem = document.querySelector('.grid');
+    var iso = new Isotope( elem, {
+      // options
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows'
     });
 
     // layout Packery after each image loads
