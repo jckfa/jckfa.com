@@ -2,15 +2,16 @@
   ('/', 'index', 'Work'),
   ('/about', 'about', 'About')
 ] -%}
-{% set active_page = active_page | default('index') -%}
+{% set active_page = active_page -%}
 
 <header>
   <nav>
     <ul>
       {% for href, id, title in nav %}
-      <li {% if id == active_page %}class="active"{% endif
-        %}>
-        <a href="{{ href | e }}">{{ title | e }}</a>
+      <li>
+        <a href="{{ href | e }}" {% if id == active_page %}class="active"{% endif %}>
+          {{ title | e }}
+        </a>
       </li>
       {% endfor %}
     </ul>

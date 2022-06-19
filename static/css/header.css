@@ -31,13 +31,14 @@ nav ul {
 
 nav a {
   display: inline-block;
-  /* text-decoration: none; */
+  text-decoration: none;
   /* background-color: gray; */
   padding: 0.5em;
 }
 
   .active {
-    color: purple;
+    /* color: purple; */
+    text-decoration: underline;
   }
 
 .button-group, .path {
