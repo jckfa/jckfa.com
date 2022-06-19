@@ -1,11 +1,20 @@
-from flask import Flask, render_template, url_for, make_response
-import os
+from flask import Flask, render_template, url_for
+import random, os
 # import pandas as pd
 app = Flask(__name__)
 app.debug = True
 
 # if __name__ == "__main__":
 #   app.run(debug=True)
+
+@app.template_filter('shuffle')
+def filter_shuffle(seq):
+  try:
+    result = list(seq)
+    random.shuffle(result)
+    return result
+  except:
+    return seq
 
 @app.route('/')
 def index():
