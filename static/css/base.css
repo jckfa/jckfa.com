@@ -18,7 +18,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-  @media only screen and (min-width: 640px) {
+  @media (min-width: 640px) {
     body {font-size: 2rem;}
   }
 
@@ -34,10 +34,9 @@ i {
   text-transform: uppercase;
 }
 
-header, footer {
+/* header, footer {
   padding: 0 0.5em;
-  background-color: white;
-}
+} */
 
 footer {
   color: var(--bg);

@@ -1,3 +1,23 @@
+{% set nav = [
+  ('/', 'index', 'Work'),
+  ('/about', 'about', 'About')
+] -%}
+{% set active_page = active_page | default('index') -%}
+
 <header>
-  header
+  <nav>
+    <ul>
+      {% for href, id, title in nav %}
+      <li {% if id == active_page %}class="active"{% endif
+        %}>
+        <a href="{{ href | e }}">{{ title | e }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  
+  <div class="button-group filters-button-group">
+    <button class="button is-checked" data-filter="*">All</button>
+    <button class="button" data-filter="._font">Type</button>
+  </div>
 </header>
