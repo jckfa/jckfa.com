@@ -40,10 +40,15 @@ nav a {
     color: purple;
   }
 
-.button-group {
+.button-group, .path {
   display: flex;
   padding: 0 0.5em;
   order: 1;
+  /* background-color: gray; */
+}
+
+.path {
+  padding: 0.5em;
 }
 
   .button {

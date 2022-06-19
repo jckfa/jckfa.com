@@ -34,19 +34,6 @@ i {
   text-transform: uppercase;
 }
 
-/* header, footer {
-  padding: 0 0.5em;
-} */
-
-footer {
-  color: var(--bg);
-  background-color: var(--text);
-}
-
-header, main {
-  /* margin-bottom: 1em; */
-}
-
 main {
   padding: 0.375em 0.25em;
 }

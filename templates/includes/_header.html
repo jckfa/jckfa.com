@@ -16,8 +16,18 @@
     </ul>
   </nav>
   
+  {% if request.path == "/" %}
   <div class="button-group filters-button-group">
     <button class="button is-checked" data-filter="*">All</button>
     <button class="button" data-filter="._font">Type</button>
   </div>
+  {% else %}
+  <div class="path">
+    {{request.path
+      .replace("/", "", 1)
+      .replace("/", " / ")
+      .replace("+", " ")
+      .title()}}
+  </div>
+  {% endif %}
 </header>
