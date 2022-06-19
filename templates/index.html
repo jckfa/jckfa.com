@@ -11,7 +11,7 @@
     {% for path in work_list | shuffle %}
       {% if "front" in path.split('/')[-1].split('_')[0] %}
       <div class="grid-item {% for tag in path.split('/')[-1].split('_')[4].split('+') %}_{{ tag }} {% endfor %}">
-        <a href="/project/{{path.strip('/static/img/').split('/')[-1].split('_')[1]}}" target="_blank">
+        <a href="/project/{{path.strip('/static/img/').split('/')[-1].split('_')[1]}}">
           <img src="{{path}}" alt=""/>
           <div class="caption">{{path.split('/')[-1].split('_')[2].replace('+', ' ')}}</div>
         </a>

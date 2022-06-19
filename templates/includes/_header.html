@@ -24,11 +24,19 @@
   </div>
   {% else %}
   <div class="path">
+    {% if "project" in request.path %}
+    <a class="home" href="/">Work</a>
+    <div class="separator">/</div>
+    {% endif %}
+
+    <div>
     {{request.path
-      .replace("/", "", 1)
-      .replace("/", " / ")
+      .replace("/project", "")
+      .replace("/", "")
       .replace("+", " ")
-      | capfirst}}
+      | capfirst
+    }}
+    </div>
   </div>
   {% endif %}
 </header>

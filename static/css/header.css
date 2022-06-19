@@ -52,6 +52,14 @@ nav {
   padding: 0.5em;
 }
 
+  .home {
+    display: inline-block;
+  }
+
+  .separator {
+    padding: 0 0.25em;
+  }
+
   .button {
     color: inherit;
     font-family: inherit;
