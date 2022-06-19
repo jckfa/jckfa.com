@@ -16,6 +16,12 @@ def filter_shuffle(seq):
   except:
     return seq
 
+# Capitalize first letter, leave rest unchanged
+# for page titles in _header.html
+@app.template_filter('capfirst')
+def filter_capfirst(s):
+  return s[:1].upper() + s[1:]
+
 @app.route('/')
 def index():
   path = "static/img"
