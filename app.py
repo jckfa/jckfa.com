@@ -38,7 +38,7 @@ def about():
 @app.route('/project/<project>')
 def project(project):
   # if project exists
-  return render_template('project.html', project = project)
+  return render_template('projects/' + project + '.html', project = project)
   # else return 404
 
 @app.errorhandler(404)

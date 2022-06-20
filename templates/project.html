@@ -1,5 +1,15 @@
 {% extends "includes/base.html" %}
 
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/project.css")}}>
+{% endblock %}
+
 {% block main %}
-  {{project}}
+<div class="project">
+  <h1>{{ project | replace("+", " ") }}</h1>
+
+  {% block content %}
+  {% endblock %}
+</div>
 {% endblock %}
