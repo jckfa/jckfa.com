@@ -1,3 +1,42 @@
 .project {
-  padding: 0 0.25em;
+  /* padding: 0 0.25em; */
+  margin-bottom: 4em;
 }
+
+  .positioner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1em;
+  }
+
+    @media (min-width: 960px)  {
+      .positioner {
+        flex-direction: row;
+      }
+    }
+    
+    .positioner img,
+    .positioner p {
+      width: 100%;
+      padding: 0.25em;
+      box-sizing: border-box;
+    }
+
+      @media (min-width: 960px)  {
+        .positioner img,
+        .positioner > p,
+        .positioner > div {
+          width: 50%;
+          /* background-color: red; */
+        }
+
+        .positioner.full img {
+          width: 100%;
+        }
+      }
+
+  .project p + p {
+    margin-top: 1em;
+  }
