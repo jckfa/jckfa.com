@@ -35,6 +35,10 @@ def index():
 def about():
   return render_template('about.html')
 
+@app.route('/shop')
+def shop():
+  return render_template('shop.html')
+
 @app.route('/project/<project>')
 def project(project):
   # if project exists

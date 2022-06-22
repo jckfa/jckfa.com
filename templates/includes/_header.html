@@ -1,6 +1,7 @@
 {% set nav = [
   ('/', 'index', 'Work'),
-  ('/about', 'about', 'About')
+  ('/about', 'about', 'About'),
+  ('/shop', 'shop', 'Shop')
 ] -%}
 {% set active_page = active_page -%}
 
@@ -24,18 +25,15 @@
   </div>
   {% else %}
   <div class="path">
-    {% if "project" in request.path %}
     <a class="home" href="/">Work</a>
     <div class="separator">/</div>
-    {% endif %}
-
     <div>
-    {{request.path
-      .replace("/project", "")
-      .replace("/", "")
-      .replace("+", " ")
-      | capfirst
-    }}
+      {{request.path
+        .replace("/project", "")
+        .replace("/", "")
+        .replace("+", " ")
+        | capfirst
+      }}
     </div>
   </div>
   {% endif %}

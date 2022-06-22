@@ -33,7 +33,7 @@ nav {
     display: inline-block;
     text-decoration: none;
     /* background-color: gray; */
-    padding: 0.5em;
+    padding: var(--x-margin) calc(var(--x-margin) + 0.25em);
   }
 
     .active {
@@ -43,13 +43,15 @@ nav {
 
 .button-group, .path {
   display: flex;
-  padding: 0 0.5em;
+  padding: 0 calc(var(--x-margin) + 0.25em);
   order: 1;
   /* background-color: gray; */
 }
 
 .path {
-  padding: 0.5em;
+  padding: var(--x-margin) calc(var(--x-margin) + 0.25em);
+  /* color: blue; */
+  text-transform: uppercase;
 }
 
   .home {
