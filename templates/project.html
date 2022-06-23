@@ -7,7 +7,11 @@
 
 {% block main %}
 <div class="page-title">
-  <h1>{{ project | replace("+", " ") }}</h1>
+  {% if title %}
+  <h1>{{ title }}</h1>
+  {% else %}
+  <h1>{{ hero.split("_")[2].replace("+", " ") }}</h1>
+  {% endif %}
 </div>
 <div class="project">
   {% block content %}
