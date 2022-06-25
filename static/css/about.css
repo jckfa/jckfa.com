@@ -42,7 +42,7 @@ body {
     /* background-color: white; */
   }
 
-  .about p + h2, .about ul + h2 {
+  .about p + p, .about p + h2, .about ul + h2 {
     margin-top: 1em;
   }
 
