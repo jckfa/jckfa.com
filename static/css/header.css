@@ -34,11 +34,19 @@ nav {
     text-decoration: none;
     /* background-color: gray; */
     padding: var(--x-margin) calc(var(--x-margin) + 0.25em);
+    transition: transform 200ms cubic-bezier(0,1.6,.7,1.6);
   }
 
+    nav a:hover {
+      transform: scale(1.2);
+    }
+
     .active {
-      /* color: purple; */
-      text-decoration: underline;
+      /* text-decoration: underline; */
+      text-decoration: none;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius);
     }
 
 .button-group, .path {
@@ -71,7 +79,7 @@ nav {
     cursor: pointer;
     padding: 0.25em 0.5em;
     border: 2px solid transparent;
-    border-radius: 10px;
+    border-radius: var(--radius);
     transition: 100ms ease-in-out;
   }
 
