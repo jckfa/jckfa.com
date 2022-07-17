@@ -51,14 +51,14 @@ body {
 
     /* current slide number & total slide count */
     .carousel::after {
-      font-size: 0.5em;
+      font-size: 0.75em;
       content: attr(data-status);
       color: var(--page-text-color);
       background-color: var(--page-bg-color);
       border-radius: 100px;
       position: absolute;
-      bottom: 0.5em;
-      right: 0.5em;
+      bottom: 0.75em;
+      right: 0.75em;
       padding: 0.3em 0.5em;
       margin-right: 0.5em;
     }
