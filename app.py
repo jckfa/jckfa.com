@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, abort
 import random, os
 # import pandas as pd
 app = Flask(__name__)
@@ -43,11 +43,9 @@ def about():
 def contact():
   return render_template('contact.html')
 
-@app.route('/project/<project>')
+@app.route('/<project>')
 def project(project):
-  # if project exists
   return render_template('projects/' + project + '.html', project = project)
-  # else return 404
 
 @app.errorhandler(404)
 def page_not_found(error):
