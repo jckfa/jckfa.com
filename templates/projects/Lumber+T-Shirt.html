@@ -6,23 +6,13 @@
 {{ super() }}
 <style>
   :root {
+    --text: white;
+    --bg: #f60;
     --border-color: rgba(255, 255, 255, .25);
     --border-color-active: rgba(255, 255, 255, .6);
   }
 
-  body {
-    color: white;
-    background-color: #f60;
-  }
-
-  .hero {
-    height: 80vh;
-    background-image: url('{{url_for("static", filename=base_url + hero)}}');
-    background-size: contain;
-    background-position: center;
-    /* background-color: red; */
-    margin: 0 0.25em;
-  }
+  .hero {background-image: url('{{url_for("static", filename=base_url + hero)}}');}
 </style>
 {% endblock %}
 
