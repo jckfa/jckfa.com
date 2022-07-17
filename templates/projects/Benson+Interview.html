@@ -2,28 +2,40 @@
 {% set title = "Shoplifters 10 Interview with Nick Benson" %}
 {% set base_url = "img/" + project + "/" %}
 {% set hero = "front_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+386-387)_2021_book+journalism.jpg" %}
+{% set L = "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+" %}
+{% set R = ")_2021_book+journalism.jpg" %}
+
+{% set img_list = [
+  L + "384-385",
+  "front" + L + "386-387",
+  L + "388-389",
+  L + "390-391",
+  L + "392-393",
+  L + "394-395",
+  L + "396-397",
+  L + "398-399",
+  L + "400-401",
+  L + "402-403",
+  L + "404-405",
+  L + "406-407",
+  L + "408-409",
+  L + "410-411",
+  L + "412-413",
+  L + "414-415",
+  L + "416-417",
+] %}
 
 {% block head %}
 {{ super() }}
 <style>
   :root {
+    --page-text-color: white;
+    --page-bg-color: #915a36;
     --border-color: rgba(255, 255, 255, .15);
     --border-color-active: rgba(255, 255, 255, .5);
   }
 
-  body {
-    color: white;
-    background-color: #915a36;
-  }
-
-  .hero {
-    height: 80vh;
-    background-image: url('{{url_for("static", filename=base_url + hero)}}');
-    background-size: contain;
-    background-position: center;
-    /* background-color: red; */
-    margin: 0 0.25em;
-  }
+  .hero {background-image: url('{{url_for("static", filename=base_url + hero)}}')}
 </style>
 {% endblock %}
 
@@ -44,67 +56,17 @@
   </div>
 </div>
 
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+Interview+Screenshot+Nick_2021_book+journalism.gif")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+Interview+Screenshot+Jack_2021_book+journalism.gif")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+384-385)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "front_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+386-387)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+388-389)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+390-391)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+392-393)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+394-395)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+396-397)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+398-399)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+400-401)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+402-403)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+404-405)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+406-407)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+408-409)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+410-411)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+412-413)_2021_book+journalism.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+414-415)_2021_book+journalism.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+416-417)_2021_book+journalism.jpg")}}' alt=""/>
+<div class="carousel">
+  {% for img in img_list %}
+  <div class="carousel-cell">
+    <img src='{{url_for("static", filename=base_url + img + R)}}' alt=""/>
+  </div>
+  {% endfor %}
 </div>
 
 <div class="positioner">
   <p>
-    <i>Images from “Special Features” section “Nick Benson and the John Stevens Shop Designer and stone carver Nick Benson in conversation with Jack Fahnestock” of <a href="https://actualsource.org/products/copy-of-shoplifters-10-new-type-design-vol-2" target="_blank">Shoplifters Issue 10: New Type Design Vol. 2</a>, courtesy of <a href="http://actualsource.work/" target="_blank">Actual Source</a>.</i>
+    <i>Images from the Special Features section “Nick Benson and the John Stevens Shop, In conversation with Jack Fahnestock” of <a href="https://actualsource.org/products/copy-of-shoplifters-10-new-type-design-vol-2" target="_blank">Shoplifters Issue 10: New Type Design Vol. 2</a>, courtesy of <a href="http://actualsource.work/" target="_blank">Actual Source</a>.</i>
   </p>
 </div>
 {% endblock %}
