@@ -38,7 +38,9 @@
     {% endblock %}
   </main>
 
-  {% include 'includes/_footer.html' %}
+  {% if request.path != "/" %}
+    {% include 'includes/_footer.html' %}
+  {% endif %}
   
   {% block scripts %}
   {% endblock %}
