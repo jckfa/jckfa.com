@@ -1,0 +1,34 @@
+
+.contact-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-btn {
+  width: 100%;
+  text-align: center;
+  /* background-color: #aaa; */
+  width: 100%;
+  padding: 16vh 0.25em;
+  margin: 0.25em 0.25em;
+  box-sizing: border-box;
+  display: block;
+  border: 2px solid currentColor;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 200ms var(--anim);
+}
+
+  @media (min-width: 960px)  {
+    .contact-btn:hover {
+      transform: translateY(-6px);
+    }
+
+    .contact-btns {
+      flex-direction: row;
+    }
+
+    .contact-btn {
+      width: 50%;
+    }
+  }
