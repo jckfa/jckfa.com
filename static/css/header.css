@@ -4,7 +4,8 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   /* background-color: gray; */
-  padding: 0.5em calc(var(--x-margin) + 0.25em) 0.25em;
+  padding: 0.5em calc(var(--x-margin) + 0.25em) 0;
+  margin-bottom: 2em;
   box-sizing: border-box;
 }
 
@@ -89,10 +90,6 @@ nav a {
     }
 
 @media (min-width: 640px) {
-  header {
-    padding-bottom: 1em;
-  }
-
   .button-group {
     order: 2;
     margin-top: 0;
