@@ -24,20 +24,24 @@ def filter_capfirst(s):
 
 @app.route('/')
 def index():
+  return render_template('index.html')
+
+@app.route('/work')
+def work():
   path = "static/img"
   fname = []
   for root, d_names, f_names in os.walk(path):
     for f in f_names:
       fname.append(os.path.join(root, f))
-  return render_template('index.html', work_list = fname)
+  return render_template('work.html', work_list = fname)
 
 @app.route('/about')
 def about():
   return render_template('about.html')
 
-@app.route('/shop')
-def shop():
-  return render_template('shop.html')
+@app.route('/contact')
+def contact():
+  return render_template('contact.html')
 
 @app.route('/project/<project>')
 def project(project):

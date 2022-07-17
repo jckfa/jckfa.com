@@ -1,11 +1,13 @@
 {% set nav = [
-  ('/', 'index', 'Work'),
+  ('/work', 'work', 'Work'),
   ('/about', 'about', 'About'),
-  ('/shop', 'shop', 'Shop')
+  ('/contact', 'contact', 'Contact')
 ] -%}
 {% set active_page = active_page -%}
 
 <header>
+  <a class="home {% if request.path == '/' %}active{% endif %}" href="/">JCKFA</a>
+
   <nav>
     <ul>
       {% for href, id, title in nav %}
@@ -17,24 +19,11 @@
       {% endfor %}
     </ul>
   </nav>
-  
-  {% if request.path == "/" %}
+
+  {% if request.path == "/work" %}
   <div class="button-group filters-button-group">
     <button class="button is-checked" data-filter="*">All</button>
     <button class="button" data-filter="._font">Type</button>
-  </div>
-  {% else %}
-  <div class="path">
-    <a class="home" href="/">Work</a>
-    <div class="separator">/</div>
-    <div>
-      {{request.path
-        .replace("/project", "")
-        .replace("/", "")
-        .replace("+", " ")
-        | capfirst
-      }}
-    </div>
   </div>
   {% endif %}
 </header>

@@ -1,0 +1,15 @@
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  display: inline-block;
+  /* text-decoration: none; */
+  /* background-color: gray; */
+  padding: 0.5em;
+}
+
+  .active {
+    color: purple;
+  }

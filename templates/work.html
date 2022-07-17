@@ -1,0 +1,80 @@
+{% extends "includes/base.html" %}
+{% set active_page = "work" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/work.css")}}>
+{% endblock %}
+
+{% block main %}
+  <div class="grid">
+    {% for path in work_list | shuffle %}
+      {% if "front" in path.split('/')[-1].split('_')[0] %}
+      <div class="grid-item {% for tag in path.split('/')[-1].split('_')[4].split('+') %}_{{ tag }} {% endfor %}">
+        <a href="/work/{{path.strip('/static/img/').split('/')[-1].split('_')[1]}}">
+          <img src="{{url_for('static', filename=path.replace('static/', '', 1))}}" alt=""/>
+          <div class="caption">{{path.split('/')[-1].split('_')[2].replace('+', ' ')}}</div>
+        </a>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script>
+    // init Packery
+    var grid = document.querySelector('.grid');
+    var pckry = new Packery(grid, {
+      itemSelector: '.grid-item',
+      percentPosition: true });
+
+    // init Isotope
+    var elem = document.querySelector('.grid');
+    var iso = new Isotope( elem, {
+      // options
+      itemSelector: '.grid-item',
+    });
+
+    // filter functions
+    var filterFns = {};
+
+    // bind filter button click
+    var filtersElem = document.querySelector('.filters-button-group');
+    filtersElem.addEventListener( 'click', function( event ) {
+      // only work with buttons
+      if ( !matchesSelector( event.target, 'button' ) ) {
+        return;
+      }
+      var filterValue = event.target.getAttribute('data-filter');
+      // use matching filter function
+      filterValue = filterFns[ filterValue ] || filterValue;
+      iso.arrange({ filter: filterValue });
+    });
+
+    // change is-checked class on buttons
+    var buttonGroups = document.querySelectorAll('.button-group');
+    for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+      var buttonGroup = buttonGroups[i];
+      radioButtonGroup( buttonGroup );
+    }
+
+    function radioButtonGroup( buttonGroup ) {
+      buttonGroup.addEventListener( 'click', function( event ) {
+        // only work with buttons
+        if ( !matchesSelector( event.target, 'button' ) ) {
+          return;
+        }
+        buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+        event.target.classList.add('is-checked');
+      });
+    }
+
+    // layout Packery after each image loads
+    imagesLoaded(grid).on('progress', function () {
+      pckry.layout();
+    });
+  </script>
+{% endblock %}

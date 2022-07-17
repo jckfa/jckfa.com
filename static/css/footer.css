@@ -30,12 +30,12 @@ footer {
     /* background-color: #aaa; */
     box-sizing: border-box;
     display: block;
-    border: 2px solid currentColor;
+    border: 2px solid rgba(0, 0, 0, .15);
     border-radius: var(--radius);
     padding: 2vh 1em;
     text-decoration: none;
     font-weight: bolder;
-    transition: transform 200ms var(--anim);
+    transition: 200ms var(--anim);
   }
 
   @media (min-width: 960px)  {
@@ -51,6 +51,7 @@ footer {
   @media (min-width: 1280px)  {
     .footer-list a:hover {
       transform: translateY(-3px);
+      border-color:rgba(0, 0, 0, .5);
     }
 
     .footer-list li {

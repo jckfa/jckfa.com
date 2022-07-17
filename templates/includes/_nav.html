@@ -1,0 +1,16 @@
+{% set nav = [
+  ('/', 'index', 'Work'),
+  ('/about', 'about', 'About')
+] -%}
+{% set active_page = active_page | default('index') -%}
+
+<nav>
+  <ul>
+    {% for href, id, title in nav %}
+    <li {% if id == active_page %}class="active"{% endif
+      %}>
+      <a href="{{ href | e }}">{{ title | e }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -9,8 +9,8 @@
 
 body {
   color: var(--text);
-  /* font: 1rem/1.2 "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, "helvetica neue", helvetica, sans-serif; */
-  font: 5vw/1.2 arial, 'helvetica neue', helvetica, sans-serif;
+  /* "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont */
+  font: 4.5vw/1.2 "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, 'helvetica neue', helvetica, sans-serif;
   /* letter-spacing: 0.04em; */
   background: var(--bg);
   hyphens: auto;
@@ -20,10 +20,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-  @media (min-width: 640px)  {body {font-size: 4vw}}
-  @media (min-width: 960px)  {body {font-size: 3vw}}
-  @media (min-width: 1280px) {body {font-size: 2.25vw}}
-  @media (min-width: 1600px) {body {font-size: 1.75vw}}
+  @media (min-width: 320px)  {body {font-size: 3.75vw}}
+  @media (min-width: 640px)  {body {font-size: 3vw}}
+  @media (min-width: 960px)  {body {font-size: 2vw}}
+  @media (min-width: 1280px) {body {font-size: 1.75vw}}
+  @media (min-width: 1600px) {body {font-size: 1.5vw}}
   @media (min-width: 1920px) {body {font-size: 1.25vw}}
   @media (min-width: 2240px) {body {font-size: 1vw}}
 
@@ -32,15 +33,15 @@ a {
   
 }
 
-a[href*="//"]:not([href*="mysite.com"])::after {
+a[href*="//"]:not([href*="jckfa.com"])::after {
   content: "↗";
-  position: relative;
-  top: -0.5em;
-  font-size: 75%;
-  font-weight: bold;
   text-decoration: none;
   display: inline-block;
+  /* position: relative;
+  top: -0.5em;
   margin-right: -0.5em;
+  font-size: 75%;
+  font-weight: bold; */
 }
 
 i {
@@ -53,11 +54,13 @@ i {
 
 main {
   padding: 0.375em var(--x-margin);
+  /* background-color: green; */
+  box-sizing: border-box;
 }
 
 main p {
   max-width: 35em;
-  /* background-color: gray; */
+  /* background-color: green; */
 }
 
 h1 {
