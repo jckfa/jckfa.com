@@ -35,7 +35,8 @@ footer {
     padding: 2vh 1em;
     text-decoration: none;
     font-weight: bolder;
-    transition: 200ms var(--anim);
+    transition: border-color 200ms var(--anim);
+    transition: transform 200ms var(--anim);
   }
 
   @media (min-width: 960px)  {
@@ -46,14 +47,14 @@ footer {
       .footer-list li {
         width: 50%;
       }
+      
+      .footer-list a:hover {
+        transform: translateY(-3px);
+        border-color: var(--border-color-active);
+      }
   }
 
   @media (min-width: 1280px)  {
-    .footer-list a:hover {
-      transform: translateY(-3px);
-      border-color: var(--border-color-active);
-    }
-
     .footer-list li {
       width: 25%;
     }

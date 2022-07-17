@@ -16,7 +16,8 @@
   text-decoration: none;
   border: 2px solid rgba(0, 0, 0, .15);
   border-radius: var(--radius);
-  transition: 200ms var(--anim);
+  transition: border-color 200ms var(--anim);
+  transition: transform 200ms var(--anim);
 }
 
   @media (min-width: 960px)  {
