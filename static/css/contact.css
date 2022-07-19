@@ -17,12 +17,12 @@
   border: 2px solid rgba(0, 0, 0, .15);
   border-radius: var(--radius);
   transition: border-color 200ms var(--anim);
-  transition: transform 200ms var(--anim);
+  /* transition: transform 200ms var(--anim); */
 }
 
   @media (min-width: 960px)  {
     .contact-btn:hover {
-      transform: translateY(-3px);
+      /* transform: translateY(-3px); */
       border-color:rgba(0, 0, 0, .5);
     }
 
