@@ -23,7 +23,7 @@ footer {
   }
 
   .footer-list a {
-    font-size: 0.6em;
+    font-size: 0.8em;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -40,6 +40,10 @@ footer {
   }
 
   @media (min-width: 960px)  {
+    .footer-list a {
+      font-size: 0.6em;
+    }
+
     .footer-list {
       flex-direction: row;
     }
