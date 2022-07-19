@@ -4,6 +4,15 @@
   justify-content: space-between;
 }
 
+  .about a {
+    border: 2px solid currentColor;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.225em;
+    margin: 0.075em 0;
+  }
+
   .about section {
     width: 100%;
     padding: 0.125em 0.25em;
@@ -19,6 +28,21 @@
     .about {
       flex-direction: row;
     }
+
+      @keyframes shake {
+        0% {transform: translateX(0);}
+        25% {transform: translateX(1px);}
+        50% {transform: translateX(0);}
+        75% {transform: translateX(-1px);}
+        100% {transform: translateX(0);}
+      }
+
+      .about a:hover {
+        animation-name: shake;
+        animation-duration: 200ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
 
     .about section {
       width: 49%;
