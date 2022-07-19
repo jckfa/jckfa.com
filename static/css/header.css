@@ -13,7 +13,7 @@ header {
   border: 2px solid var(--border-color);
   border-radius: var(--radius);
   transition: border-color 200ms var(--anim);
-  transition: transform 200ms var(--anim);
+  /* transition: transform 200ms var(--anim); */
 }
 
 @media (min-width: 960px) {
@@ -22,9 +22,9 @@ header {
       border-color: var(--border-color-active);
     }
 
-    .home:active, nav a:active, .button:active {
+    /* .home:active, nav a:active, .button:active {
       transform: scale(1.1);
-    }
+    } */
   }
 
 .home {
@@ -72,7 +72,7 @@ nav a {
     cursor: pointer;
     padding: var(--x-margin) calc(var(--x-margin) + 0.25em);
     border-radius: 100px;
-    transition: 100ms ease-in-out;
+    transition: border-color 100ms ease-in-out;
     /* background-color: blue; */
   }
 
@@ -85,9 +85,9 @@ nav a {
       border-color: var(--text);
     }
 
-    .button:active {
+    /* .button:active {
       transform: scale(1.1);
-    }
+    } */
 
 @media (min-width: 640px) {
   .button-group {
