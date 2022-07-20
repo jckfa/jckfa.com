@@ -78,4 +78,5 @@
 
     .work-projects::before {
       content: "Projects: ";
+      text-transform: uppercase;
     }
