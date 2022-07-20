@@ -66,10 +66,15 @@
     }
   });
 
+  // prefix singlular digits with zero
+  function zero_pad(n) {
+    return n < 10 ? "0" + n : n;
+  }
+
   // current slide number & total slide count
   function updateStatus() {
     var slideNumber = flkty.selectedIndex + 1;
-    carousel.setAttribute("data-status", slideNumber + '/' + flkty.slides.length);
+    carousel.setAttribute("data-status", zero_pad(slideNumber) + ' / ' + flkty.slides.length);
   }
   updateStatus();
 
