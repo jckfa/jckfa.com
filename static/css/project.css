@@ -48,8 +48,8 @@
     .carousel::after {
       font-size: 0.75em;
       content: attr(data-status);
-      color: var(--page-text-color);
-      background-color: var(--page-bg-color);
+      color: var(--text);
+      background-color: var(--bg);
       border-radius: 100px;
       position: absolute;
       bottom: 0.75em;
@@ -95,7 +95,7 @@
   }
 
   .flickity-button {
-    color: var(--page-bg-color);
+    color: var(--bg);
     opacity: 1;
   }
 
@@ -135,11 +135,11 @@
     height: 0.4em;
     opacity: 0.5;
     background: transparent;
-    border: 2px solid var(--page-bg-color);
+    border: 2px solid var(--bg);
   }
 
     .flickity-page-dots .dot.is-selected {
-      background: var(--page-bg-color);
+      background: var(--bg);
     }
 
     @media (max-width: 1280px)  {
