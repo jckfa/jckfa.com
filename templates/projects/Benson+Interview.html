@@ -28,6 +28,7 @@
 {% block head %}
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 {{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
 <style>
   :root {
     --text: hsl(24, 46%, 96%);
