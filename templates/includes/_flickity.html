@@ -28,7 +28,7 @@
   // current slide number & total slide count
   function updateStatus() {
     var slideNumber = flkty.selectedIndex + 1;
-    carousel.setAttribute("data-status", zero_pad(slideNumber) + ' / ' + flkty.slides.length);
+    carousel.setAttribute("data-status", zero_pad(slideNumber) + ' / ' + zero_pad(flkty.slides.length));
   }
   updateStatus();
 
