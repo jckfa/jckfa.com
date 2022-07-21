@@ -3,7 +3,6 @@
 
 {% block head %}
 {{ super() }}
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href={{url_for("static", filename="css/project.css")}}>
 <!-- <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@2/fullscreen.css"> -->
 <style>
@@ -43,44 +42,4 @@
     easing: 'easeOutCubic'
 });
 </script>
-
-<!-- Flickity -->
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script>
-  var carousel = document.querySelector('.carousel');
-  var flkty = new Flickity( carousel, {
-    contain: true,
-    wrapAround: true,
-    hash: true,
-    selectedAttraction: 0.2,
-    friction: 0.8,
-    imagesLoaded: true,
-    pageDots: false,
-    fullscreen: true,
-    lazyLoad: 1,
-    arrowShape: { 
-      x0: 10,
-      x1: 60, y1: 50,
-      x2: 65, y2: 45,
-      x3: 20
-    }
-  });
-
-  // prefix singlular digits with zero
-  function zero_pad(n) {
-    return n < 10 ? "0" + n : n;
-  }
-
-  // current slide number & total slide count
-  function updateStatus() {
-    var slideNumber = flkty.selectedIndex + 1;
-    carousel.setAttribute("data-status", zero_pad(slideNumber) + ' / ' + flkty.slides.length);
-  }
-  updateStatus();
-
-  flkty.on( 'select', updateStatus );
-</script>
-
-<!-- <script src="https://unpkg.com/flickity-hash@2/hash.js"></script> -->
-<!-- <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script> -->
 {% endblock %}

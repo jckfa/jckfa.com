@@ -26,6 +26,7 @@
 ] %}
 
 {% block head %}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 {{ super() }}
 <style>
   :root {
@@ -69,4 +70,9 @@
     <i>Images from the Special Features section “Nick Benson and the John Stevens Shop, In conversation with Jack Fahnestock” of <a href="https://actualsource.org/products/copy-of-shoplifters-10-new-type-design-vol-2" target="_blank">Shoplifters Issue 10: New Type Design Vol. 2</a>, courtesy of <a href="http://actualsource.work/" target="_blank">Actual Source</a>.</i>
   </p>
 </div>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% include 'includes/_flickity.html' %}
 {% endblock %}
