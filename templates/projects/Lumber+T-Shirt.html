@@ -6,10 +6,10 @@
 {{ super() }}
 <style>
   :root {
-    --text: white;
-    --bg: #f60;
-    --border-color: rgba(255, 255, 255, .25);
-    --border-color-active: rgba(255, 255, 255, .6);
+    --text: hsl(24, 100%, 96%);
+    --bg: hsl(24, 100%, 50%);
+    --btn-text-color: hsl(36, 100%, 15%);
+    --btn-color:      hsl(36, 100%, 80%);
   }
 
   .hero {background-image: url('{{url_for("static", filename=base_url + hero)}}');}

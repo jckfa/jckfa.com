@@ -30,10 +30,11 @@
 {{ super() }}
 <style>
   :root {
-    --text: white; 
-    --bg: #915a36;
-    --border-color: rgba(255, 255, 255, .35);
-    --border-color-active: rgba(255, 255, 255, 1);
+    --text: hsl(24, 46%, 96%);
+    --bg: hsl(24, 46%, 40%);
+    --btn-text-color: hsl(36, 100%, 15%);
+    --btn-color:      hsl(36, 100%, 70%);
+    /* --border-color: red; */
   }
 
   .hero {background-image: url('{{url_for("static", filename=base_url + hero)}}')}

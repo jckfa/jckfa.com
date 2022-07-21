@@ -23,6 +23,7 @@ footer {
   }
 
   .footer-list a {
+    color: var(--btn-text-color);
     font-size: 0.8em;
     width: 100%;
     height: 100%;
@@ -55,7 +56,7 @@ footer {
       
       .footer-list a:hover {
         /* transform: translateY(-3px); */
-        border-color: var(--border-color-active);
+        border-color: var(--border-color);
       }
   }
 

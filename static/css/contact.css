@@ -5,6 +5,7 @@
 }
 
 .contact-btn {
+  color: var(--btn-text-color);
   width: 100%;
   text-align: center;
   /* background-color: #aaa; */
@@ -24,7 +25,7 @@
   @media (min-width: 960px)  {
     .contact-btn:hover {
       /* transform: translateY(-3px); */
-      border-color: var(--border-color-active);
+      border-color: var(--border-color);
     }
 
     .contact-btns {

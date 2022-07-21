@@ -4,12 +4,13 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   /* background-color: gray; */
-  padding: 0.5em calc(var(--x-margin) + 0.25em) 0;
+  padding: 0.75em calc(var(--x-margin) + 0.25em) 0;
   margin-bottom: 2em;
   box-sizing: border-box;
 }
 
 .home, nav a, .button {
+  color: var(--btn-text-color);
   border: 2px solid transparent;
   background-color: var(--btn-color);
   border-radius: var(--radius);
@@ -20,7 +21,7 @@ header {
 @media (min-width: 960px) {
     .home:hover, nav a:hover, .button:hover {
       /* transform: translateY(-3px); */
-      border-color: var(--border-color-active);
+      border-color: var(--border-color);
     }
 
     /* .home:active, nav a:active, .button:active {
@@ -53,7 +54,7 @@ nav a {
 }
 
 .active {
-  border: 2px solid var(--border-color-active);
+  border: 2px solid var(--border-color);
   border-radius: var(--radius);
 }
 
@@ -65,7 +66,7 @@ nav a {
 }
 
   .button {
-    color: inherit;
+    color: var(--btn-text-color);
     font-family: inherit;
     font-size: inherit;
     /* display: inline-block; */
@@ -84,7 +85,7 @@ nav a {
 
     .button:active,
     .button.is-checked {
-      border-color: var(--text);
+      border-color: var(--border-color);
     }
 
     /* .button:active {
