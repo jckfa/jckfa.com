@@ -1,11 +1,29 @@
 {% extends "includes/base.html" %}
 {% set active_page = "index" %}
 
+{% set img_list = [
+  "Benson+Interview/_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+384-385)_2021_book+journalism.jpg",
+  "Benson+Interview/front_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+386-387)_2021_book+journalism.jpg",
+] %}
+
 {% block head %}
 {{ super() }}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href={{url_for("static", filename="css/index.css")}}>
+<link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
 {% endblock %}
 
 {% block main %}
-  index
+<div class="carousel">
+  {% for img in img_list %}
+  <div class="carousel-cell">
+    <img src='{{url_for("static", filename="img/" + img)}}' alt=""/>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{% include 'includes/_flickity.html' %}
 {% endblock %}
