@@ -1,7 +1,7 @@
 .carousel {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 0.25em;
+  width: calc(100% - 0.5em);
+  background-color: black;
+  /* padding: 0 0.25em; */
   margin: 1em auto 0;
   box-sizing: border-box;
   position: relative;
@@ -17,7 +17,7 @@
     border-radius: 100px;
     position: absolute;
     bottom: 0.75em;
-    right: 0.65em;
+    right: 0.2em;
     padding: 0.3em 0.5em;
     margin-right: 0.5em;
   }
@@ -30,8 +30,7 @@
       .carousel::after {
         font-size: 0.75em;
         bottom: 0.75em;
-        right: 0.75em;
-        margin-right: 0.25em;
+        right: 0.15em;
       }
   }
 
