@@ -31,13 +31,13 @@ footer {
     /* background-color: #aaa; */
     box-sizing: border-box;
     display: block;
-    border: 2px solid transparent;
+    outline: 2px solid transparent;
     background-color: var(--btn-color);
     border-radius: var(--radius);
     padding: 2vh 1em;
     text-decoration: none;
     font-weight: bolder;
-    transition: border-color 200ms var(--anim);
+    transition: outline-color 200ms var(--anim);
     /* transition: transform 200ms var(--anim); */
   }
 
@@ -56,7 +56,7 @@ footer {
       
       .footer-list a:hover {
         /* transform: translateY(-3px); */
-        border-color: var(--border-color);
+        outline-color: var(--border-color);
       }
   }
 

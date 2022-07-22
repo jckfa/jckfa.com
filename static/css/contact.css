@@ -15,17 +15,17 @@
   box-sizing: border-box;
   display: block;
   text-decoration: none;
-  border: 2px solid transparent;
+  outline: 2px solid transparent;
   background-color: var(--btn-color);
   border-radius: var(--radius);
-  transition: border-color 200ms var(--anim);
+  transition: outline-color 200ms var(--anim);
   /* transition: transform 200ms var(--anim); */
 }
 
   @media (min-width: 960px)  {
     .contact-btn:hover {
       /* transform: translateY(-3px); */
-      border-color: var(--border-color);
+      outline-color: var(--border-color);
     }
 
     .contact-btns {
