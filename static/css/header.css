@@ -32,7 +32,7 @@ header {
   @media (min-width: 960px) {
     .home:hover, nav a:hover, .button:hover {
       /* outline-color: var(--border-color); */
-      background-color: transparent;
+      background-color: var(--bg);
     }
   }
 
@@ -53,8 +53,7 @@ nav a {
 }
 
 .active {
-  /* outline: 2px solid var(--border-color); */
-  background-color: transparent;
+  background-color: var(--bg);
 }
 
 .button-group {
