@@ -5,27 +5,25 @@
 }
 
 .contact-btn {
-  color: var(--btn-text-color);
+  color: var(--text);
   width: 100%;
   text-align: center;
-  /* background-color: #aaa; */
   width: 100%;
   padding: 16vh 0.25em;
   margin: 0.25em 0.25em;
   box-sizing: border-box;
   display: block;
   text-decoration: none;
-  outline: 2px solid transparent;
-  background-color: var(--btn-color);
   border-radius: var(--radius);
-  transition: outline-color 200ms var(--anim);
-  /* transition: transform 200ms var(--anim); */
+
+  outline: 2px solid var(--outline);
+  background-color: var(--btn);
+  transition: background-color 100ms ease-in-out;
 }
 
   @media (min-width: 960px)  {
     .contact-btn:hover {
-      /* transform: translateY(-3px); */
-      outline-color: var(--border-color);
+      background-color: transparent;
     }
 
     .contact-btns {

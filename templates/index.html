@@ -2,24 +2,27 @@
 {% set active_page = "index" %}
 
 {% set img_list = [
-  "Benson+Interview/_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+384-385)_2021_book+journalism.jpg",
+  "Lumber+T-Shirt/front_Lumber+T-Shirt_Lumber+T-Shirt_2021_apparel_01.jpg",
   "Benson+Interview/front_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+386-387)_2021_book+journalism.jpg",
+  "Not+Trajan/front_Not+Trajan_Exhibition+Poster_2019_poster+exhibition+font+risd_01.jpg"
 ] %}
 
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- <link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}> -->
 <link rel="stylesheet" href={{url_for("static", filename="css/index.css")}}>
-<link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
 {% endblock %}
 
 {% block main %}
-<div class="carousel">
-  {% for img in img_list %}
-  <div class="carousel-cell">
-    <img src='{{url_for("static", filename="img/" + img)}}' alt=""/>
+<div class="fixed">
+  <div class="carousel">
+    {% for img in img_list %}
+    <div class="carousel-cell">
+      <img src="{{url_for('static', filename='img/' + img)}}" alt="">
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 {% endblock %}
 

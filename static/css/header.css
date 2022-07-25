@@ -10,33 +10,31 @@ header {
 }
 
 .home, nav a, .button {
-  color: var(--btn-text-color);
+  color: var(--text);
   border: none;
   outline: 2px solid transparent;
   background-color: var(--btn-color);
   border-radius: var(--radius);
   transition: outline-color 200ms var(--anim);
-  /* transition: transform 200ms var(--anim); */
+
+  outline: 2px solid var(--outline);
+  background-color: var(--btn);
+  transition: background-color 100ms ease-in-out;
 }
 
-@media (min-width: 960px) {
-    .home:hover, nav a:hover, .button:hover {
-      /* transform: translateY(-3px); */
-      outline-color: var(--border-color);
-    }
-
-    /* .home:active, nav a:active, .button:active {
-      transform: scale(1.1);
-    } */
-  }
-
 .home {
-  /* background-color: blue; */
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
   padding: var(--x-margin) 0.25em;
 }
+
+  @media (min-width: 960px) {
+    .home:hover, nav a:hover, .button:hover {
+      /* outline-color: var(--border-color); */
+      background-color: transparent;
+    }
+  }
 
 nav ul {
   list-style: none;
@@ -55,8 +53,8 @@ nav a {
 }
 
 .active {
-  outline: 2px solid var(--border-color);
-  border-radius: var(--radius);
+  /* outline: 2px solid var(--border-color); */
+  background-color: transparent;
 }
 
 .button-group {
@@ -67,17 +65,12 @@ nav a {
 }
 
   .button {
-    color: var(--btn-text-color);
     font-family: inherit;
     font-size: inherit;
-    /* display: inline-block; */
-    background: none;
     cursor: pointer;
     padding: var(--x-margin) calc(var(--x-margin) + 0.25em);
     border-radius: 100px;
-    background-color: var(--btn-color);
-    transition: outline-color 100ms ease-in-out;
-    /* background-color: blue; */
+    transition: background-color 100ms ease-in-out;
   }
 
     .button + .button {
@@ -86,12 +79,8 @@ nav a {
 
     .button:active,
     .button.is-checked {
-      outline-color: var(--border-color);
+      background-color: transparent;
     }
-
-    /* .button:active {
-      transform: scale(1.1);
-    } */
 
 @media (min-width: 640px) {
   .button-group {

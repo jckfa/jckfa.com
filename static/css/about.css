@@ -5,15 +5,16 @@
 }
 
   .about a {
-    color: var(--btn-text-color);
-    outline: 2px solid transparent;
-    background-color: var(--btn-color);
+    color: var(--text);
     border-radius: 8px;
     text-decoration: none;
     display: inline-block;
     padding: 0 0.225em;
-    margin: 0.075em 0;
-    transition: outline-color 200ms var(--anim);
+    margin: 0.125em 0;
+
+    outline: 2px solid var(--outline);
+    background-color: var(--btn);
+    transition: background-color 100ms ease-in-out;
   }
 
   .about section {
@@ -41,7 +42,7 @@
       } */
 
       .about a:hover {
-        outline-color: var(--border-color);
+        background-color: transparent;
         /* animation-name: shake;
         animation-duration: 200ms;
         animation-iteration-count: infinite;

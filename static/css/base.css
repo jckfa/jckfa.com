@@ -1,12 +1,16 @@
 :root {
-  --text: hsl(48, 100%, 15%);
-  --bg:   hsl(48, 100%, 50%);
+  --text:    hsl(48, 100%, 15%);
+  --outline: hsl(48, 100%, 25%);
+  --btn:     hsl(48, 100%, 45%);
+  --bg:      hsl(48, 100%, 50%);
+
+  --accent-text:    hsl(60, 100%, 15%);
+  --accent-outline: hsl(60, 100%, 25%);
+  --accent-bg:      hsl(60, 100%, 50%);
+  
   --anim: cubic-bezier(0, 1, 0.5, 1.3);
   --x-margin: 0.5em;
   --radius: 12px;
-  --btn-text-color: hsl(60, 100%, 15%);
-  --btn-color:      hsl(60, 100%, 50%);
-  --border-color: var(--btn-text-color);
 }
 
 body {

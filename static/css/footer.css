@@ -23,7 +23,7 @@ footer {
   }
 
   .footer-list a {
-    color: var(--btn-text-color);
+    color: var(--text);
     font-size: 0.8em;
     width: 100%;
     height: 100%;
@@ -31,14 +31,13 @@ footer {
     /* background-color: #aaa; */
     box-sizing: border-box;
     display: block;
-    outline: 2px solid transparent;
-    background-color: var(--btn-color);
+    outline: 2px solid var(--outline);
+    background-color: var(--btn);
     border-radius: var(--radius);
     padding: 2vh 1em;
     text-decoration: none;
     font-weight: bolder;
-    transition: outline-color 200ms var(--anim);
-    /* transition: transform 200ms var(--anim); */
+    transition: background-color 100ms ease-in-out;
   }
 
   @media (min-width: 960px)  {
@@ -55,8 +54,7 @@ footer {
       }
       
       .footer-list a:hover {
-        /* transform: translateY(-3px); */
-        outline-color: var(--border-color);
+        background-color: transparent;
       }
   }
 
