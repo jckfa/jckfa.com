@@ -12,11 +12,8 @@ header {
 .home, nav a, .button {
   color: var(--text);
   border: none;
-  outline: 2px solid transparent;
-  background-color: var(--btn-color);
   border-radius: var(--radius);
-  transition: outline-color 200ms var(--anim);
-
+  padding: var(--x-margin) 0.25em;
   outline: 2px solid var(--outline);
   background-color: var(--btn);
   transition: background-color 100ms ease-in-out;
@@ -26,7 +23,6 @@ header {
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
-  padding: var(--x-margin) 0.25em;
 }
 
   @media (min-width: 960px) {
@@ -42,14 +38,12 @@ nav ul {
 }
 
 nav li + li {
-  margin-left: 0.3em;
+  margin-left: 0.4em;
 }
 
 nav a {
   display: inline-block;
   text-decoration: none;
-  /* background-color: gray; */
-  padding: var(--x-margin) 0.25em;
 }
 
 .active {
