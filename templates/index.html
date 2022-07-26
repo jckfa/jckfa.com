@@ -19,7 +19,8 @@
   <div class="carousel">
     {% for img in img_list %}
     <div class="carousel-cell">
-      <img src="{{url_for('static', filename='img/' + img)}}" alt="">
+      <!-- <img src="{{url_for('static', filename='img/' + img)}}" alt=""> -->
+      <div class="bleh" style="background-image: url('{{url_for("static", filename="img/" + img)}}')"></div>
     </div>
     {% endfor %}
   </div>
