@@ -28,7 +28,7 @@ def index():
 
 @app.route('/work')
 def work():
-  path = "static/img"
+  path = "static/img/projects"
   fname = []
   for root, d_names, f_names in os.walk(path):
     for f in f_names:
