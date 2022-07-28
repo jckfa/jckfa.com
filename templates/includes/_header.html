@@ -6,24 +6,20 @@
 {% set active_page = active_page -%}
 
 <header>
-  <a class="home {% if request.path == '/' %}active{% endif %}" href="/">JCKFA</a>
+  <a class="btn home {% if request.path == '/' %}active{% endif %}" href="/">JCKFA</a>
 
   <nav>
-    <ul>
-      {% for href, id, title in nav %}
-      <li>
-        <a href="{{ href | e }}" {% if id == active_page %}class="active"{% endif %}>
-          {{ title | e }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+    {% for href, id, title in nav %}
+    <a href="{{ href | e }}" class="btn{% if id == active_page %} active{% endif %}">
+      {{ title | e }}
+    </a>
+    {% endfor %}
   </nav>
 
   {% if request.path == "/work" %}
   <div class="button-group filters-button-group">
-    <button class="button is-checked" data-filter="*">All</button>
-    <button class="button" data-filter="._font">Type</button>
+    <button class="btn btn-sort is-checked" data-filter="*">All</button>
+    <button class="btn btn-sort" data-filter="._font">Type</button>
   </div>
   {% endif %}
 </header>

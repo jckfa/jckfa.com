@@ -11,6 +11,9 @@
   --anim: cubic-bezier(0, 1, 0.5, 1.3);
   --x-margin: 0.5em;
   --radius: 12px;
+  --margin: 0.75em;
+  --btn-gap: 0.1em; 
+  --btn-pad: 0.5em;
 }
 
 body {
@@ -60,7 +63,7 @@ i {
 }
 
 main {
-  padding: 0.375em var(--x-margin);
+  padding: 0.375em calc(var(--margin) - 0.25em);
   /* background-color: green; */
   box-sizing: border-box;
 }
@@ -82,3 +85,23 @@ h3 {
   padding: 0 0.25em;
   margin-bottom: 0.5em;
 }
+
+.btn, .about a {
+  color: var(--text);
+  border: none;
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  padding: var(--btn-pad) var(--margin);
+  margin: var(--btn-gap);
+  border: 2px solid var(--outline);
+  background-color: var(--btn);
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 100ms ease-in-out;
+}
+
+  @media (min-width: 960px) {
+    .btn:hover, .about a:hover {
+      background-color: var(--bg);
+    }
+  }

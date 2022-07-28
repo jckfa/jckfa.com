@@ -1,36 +1,22 @@
-
-.contact-btns {
+.contact {
   display: flex;
   flex-direction: column;
+  padding: 0 calc(var(--margin) - 0.25em * 2 - var(--btn-gap));
+  /* padding: 0 calc(var(--margin) - var(--btn-gap)); */
 }
 
-.contact-btn {
-  color: var(--text);
-  width: 100%;
+.contact .btn {
   text-align: center;
-  width: 100%;
-  padding: 16vh 0.25em;
-  margin: 0.25em 0.25em;
-  box-sizing: border-box;
-  display: block;
-  text-decoration: none;
-  border-radius: var(--radius);
-
-  outline: 2px solid var(--outline);
-  background-color: var(--btn);
-  transition: background-color 100ms ease-in-out;
+  padding-top:    16vh;
+  padding-bottom: 16vh;
 }
 
   @media (min-width: 960px)  {
-    .contact-btn:hover {
-      background-color: transparent;
-    }
-
-    .contact-btns {
+    .contact {
       flex-direction: row;
     }
-
-    .contact-btn {
-      width: 50%;
-    }
+    
+      .contact .btn {
+        width: 50%;
+      }
   }

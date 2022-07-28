@@ -4,88 +4,48 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   /* background-color: gray; */
-  padding: 0.75em calc(var(--x-margin) + 0.25em) 0;
-  margin-bottom: 2em;
+  padding: 0 calc(var(--margin) - var(--btn-gap));
+  margin: calc(var(--margin) - var(--btn-gap)) 0 2em;
   box-sizing: border-box;
 }
 
-.home, nav a, .button {
-  color: var(--text);
-  border: none;
-  border-radius: var(--radius);
-  padding: var(--x-margin) 0.25em;
-  outline: 2px solid var(--outline);
-  background-color: var(--btn);
-  transition: background-color 100ms ease-in-out;
+@media (max-width: 640px) {
+  header .btn {
+    padding: var(--btn-pad) 0.25em;
+  }
 }
 
 .home {
   text-transform: uppercase;
-  display: inline-block;
-  text-decoration: none;
 }
 
-  @media (min-width: 960px) {
-    .home:hover, nav a:hover, .button:hover {
-      /* outline-color: var(--border-color); */
-      background-color: var(--bg);
-    }
+nav, .button-group {
+  display: flex;
+}
+
+  .active {
+    background-color: var(--bg);
   }
 
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav li + li {
-  margin-left: 0.4em;
-}
-
-nav a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.active {
-  background-color: var(--bg);
-}
-
-.button-group {
-  display: flex;
-  /* padding: 0 calc(var(--x-margin) + 0.25em); */
-  /* background-color: gray; */
-  /* margin-top: 2em; */
-}
-
-  .button {
+  .btn-sort {
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
-    padding: var(--x-margin) calc(var(--x-margin) + 0.25em);
     border-radius: 100px;
-    transition: background-color 100ms ease-in-out;
   }
 
-    .button + .button {
-      margin-left: 0.25em;
-    }
-
-    .button:active,
-    .button.is-checked {
+    .btn-sort:active,
+    .btn-sort.is-checked {
       background-color: transparent;
     }
 
-@media (min-width: 640px) {
-  .button-group {
-    order: 2;
-    margin-top: 0;
-  }
-
-  nav {
-    order: 3;
-  }
-
-    .home, nav a {
-      padding: var(--x-margin) calc(var(--x-margin) + 0.25em);
+  @media (min-width: 640px) {
+    .button-group {
+      order: 2;
+      margin-top: 0;
     }
-}
+
+    nav {
+      order: 3;
+    }
+  }

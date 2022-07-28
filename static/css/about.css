@@ -5,16 +5,9 @@
 }
 
   .about a {
-    color: var(--text);
     border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
     padding: 0 0.225em;
     margin: 0.075em 0;
-
-    border: 2px solid var(--outline);
-    background-color: var(--btn);
-    transition: background-color 100ms ease-in-out;
   }
 
   .about section {
@@ -33,22 +26,6 @@
       flex-direction: row;
     }
 
-      /* @keyframes shake {
-        0% {transform: translateX(0);}
-        25% {transform: translateX(1px);}
-        50% {transform: translateX(0);}
-        75% {transform: translateX(-1px);}
-        100% {transform: translateX(0);}
-      } */
-
-      .about a:hover {
-        background-color: transparent;
-        /* animation-name: shake;
-        animation-duration: 200ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out; */
-      }
-
     .about section {
       width: 49%;
     }
@@ -60,11 +37,8 @@
 
   .about h3 {
     text-transform: uppercase;
-    /* margin-left: 2em; */
-    /* background-color: white; */
     border-bottom: 2px solid currentColor;
     margin-bottom: 0.5em;
-    /* background-color: white; */
   }
 
   .about p + p, .about p + h3, .about ul + h3 {
