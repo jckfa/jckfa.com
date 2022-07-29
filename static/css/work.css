@@ -17,10 +17,6 @@
   @media (min-width: 1920px) {.grid-item {width: 16.666%}}
   @media (min-width: 2240px) {.grid-item {width: 14.2857%}}
 
-  .grid-item:hover {
-    z-index: 100;
-  }
-
   .grid-item a {
     text-decoration: none;
   }
@@ -32,14 +28,20 @@
     transition: box-shadow, transform 200ms var(--anim);
   }
 
+  @media (min-width: 960px)  {
+    .grid-item:hover {
+      z-index: 100;
+    }
+
     .grid-item:hover img {
       transform: scale(1.2);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     }
+  }
 
   .caption {
     width: 100%;
-    font-size: 0.8em;
+    /* font-size: 0.8em; */
     /* background-color: gray; */
     white-space: nowrap;
     overflow: hidden;
