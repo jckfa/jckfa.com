@@ -6,7 +6,18 @@
 {% set active_page = active_page -%}
 
 <header>
-  <a class="btn home {% if request.path == '/' %}active{% endif %}" href="/">JCKFA</a>
+  <!-- <a class="btn home {% if request.path == '/' %}active{% endif %}" href="/">JCKFA</a> -->
+  <a class="logo" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 218 50">
+        <g>
+          <polygon points="189.949,0 161.899,48.585 218,48.585"/>
+          <rect x="136.383" y="1.415" width="23.585" height="47.17"/>
+          <rect x="83.239" y="1.415" width="47.17" height="47.17"/>
+          <circle cx="53.412" cy="25" r="25"/>
+          <rect y="1.415" width="23.585" height="47.17"/>
+        </g>
+    </svg>
+  </a>
 
   <nav>
     {% for href, id, title in nav %}

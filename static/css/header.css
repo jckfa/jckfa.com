@@ -3,6 +3,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   /* background-color: gray; */
   padding: 0 calc(var(--margin) - var(--btn-gap));
   margin: calc(var(--margin) - var(--btn-gap)) 0 2em;
@@ -15,9 +16,24 @@ header {
   }
 }
 
-.home {
+/* .home {
   text-transform: uppercase;
+} */
+
+.logo {
+  width: 8em;
+  /* background-color: red; */
+  line-height: 0.7;
+  opacity: 1;
+  transition: opacity 100ms ease-in-out;
+  margin: var(--btn-gap);
 }
+
+  @media (min-width: 960px) {
+    .logo:hover {
+      opacity: 0.75;
+    }
+  }
 
 nav, .button-group {
   display: flex;
