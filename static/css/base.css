@@ -1,6 +1,6 @@
 :root {
   --text:    hsl(48, 100%, 15%);
-  --outline: hsl(48, 100%, 25%);
+  --outline: hsl(48, 100%, 30%);
   --btn:     hsl(48, 100%, 45%);
   --bg:      hsl(48, 100%, 50%);
 
@@ -18,9 +18,10 @@
 
 body {
   color: var(--text);
-  /* "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont */
-  font: 4.5vw/1.2 "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, 'helvetica neue', helvetica, sans-serif;
+  font: 4.5vw/1.2 "freight-sans-pro", "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, 'helvetica neue', helvetica, sans-serif;
   /* letter-spacing: 0.04em; */
+  font-weight: 500;
+  font-style: normal;
   background: var(--bg);
   hyphens: auto;
   text-rendering: optimizeLegibility;
@@ -88,10 +89,12 @@ h3 {
 
 .btn, .about a {
   color: var(--text);
+  font-family: inherit;
+  line-height: inherit;
   border: none;
   box-sizing: border-box;
   border-radius: var(--radius);
-  padding: var(--btn-pad) var(--margin);
+  padding: calc(var(--btn-pad) - 0.1em) var(--margin) var(--btn-pad);
   margin: var(--btn-gap);
   border: 2px solid var(--outline);
   background-color: var(--btn);

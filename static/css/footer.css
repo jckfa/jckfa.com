@@ -19,7 +19,7 @@ footer {
   .site-credit {
     text-align: center;
     max-width: 36em;
-    margin: 1em auto;
+    margin: 0.75em auto;
     /* background-color: gray; */
   }
 
@@ -35,7 +35,7 @@ footer {
 
   @media (min-width: 640px) {
     .site-credit {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
   }
 
