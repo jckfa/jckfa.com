@@ -1,5 +1,6 @@
 {% extends "includes/base.html" %}
 {% set base_url = "img/projects/" + project + "/" %}
+{% set active_page = "work" %}
 
 {% block head %}
 {{ super() }}
@@ -21,6 +22,7 @@
   {% endif %}
 </div>
 <div class="project">
+  <div class="hero"></div>
   {% block content %}
   {% endblock %}
 
