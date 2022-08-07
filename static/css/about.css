@@ -1,7 +1,5 @@
 .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 0 calc(var(--margin) - 0.5em);
 }
 
   .about a {
@@ -13,49 +11,65 @@
 
   .about section {
     width: 100%;
-    padding: 0.125em 0.25em;
+    padding: 1.5em 0;
     /* background-color: gray; */
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
     .about section + section {
-      margin-top: 1em;
+      /* margin-top: 1em; */
+      border-top: 2px solid currentColor;
+    }
+
+    section h3 {
+      padding-bottom: 1.5em;
     }
 
   @media (min-width: 960px)  {
-    .about {
+    .about section {
       flex-direction: row;
     }
 
-    .about section {
-      width: 49%;
+    section h3,
+    section div {
+      /* includes middle cutter */
+      width: calc(50% - 0.375em);
+      /* background-color: red; */
+    }
+  }
+
+  /* @media (min-width: 1600px)  {
+    section h3 {
+      width: calc(33.333% - 0.375em);
     }
 
-      .about section + section {
-        margin-top: 0;
-      }
-  }
+    section div {
+      includes middle cutter
+      width: calc(66.666% - 0.375em);
+    }
+  } */
 
-  .about h3 {
-    /* text-transform: uppercase; */
-    border-bottom: 2px solid currentColor;
-    padding-bottom: 0.1em;
-    margin-bottom: 0.5em;
-  }
-
-  .about p + p, .about p + h3, .about ul + h3 {
+  .about p + p {
     margin-top: 1em;
   }
 
-  .workplace + .workplace {
-    margin-top: 0.5em;
+  .workexp + .workexp {
+    margin-top: 1em;
   }
 
-  .work-details, .work-projects li {
+  .jobtitle {
     margin-left: 1em;
   }
 
-    .work-projects::before {
+  .projects li {
+    margin-left: 2em;
+  }
+
+    .projects::before {
       content: "Projects: ";
       text-transform: uppercase;
+      margin-left: 1em;
     }
