@@ -24,40 +24,16 @@
       border-top: 2px solid currentColor;
     }
 
-    section h3 {
+    .section-title {
       padding-bottom: 1.5em;
     }
-
-  @media (min-width: 960px)  {
-    .about section {
-      flex-direction: row;
-    }
-
-    section h3,
-    section div {
-      /* includes middle cutter */
-      width: calc(50% - 0.375em);
-      /* background-color: red; */
-    }
-  }
-
-  /* @media (min-width: 1600px)  {
-    section h3 {
-      width: calc(33.333% - 0.375em);
-    }
-
-    section div {
-      includes middle cutter
-      width: calc(66.666% - 0.375em);
-    }
-  } */
 
   .about p + p {
     margin-top: 1em;
   }
 
   .workexp + .workexp {
-    margin-top: 1em;
+    margin-top: 1.5em;
   }
 
   .jobtitle {
@@ -73,3 +49,71 @@
       text-transform: uppercase;
       margin-left: 1em;
     }
+
+  @media (min-width: 960px)  {
+    .about section {
+      flex-direction: row;
+    }
+
+    .section-title,
+    .section-content {
+      /* includes middle cutter */
+      width: calc(50% - 0.375em);
+      /* background-color: red; */
+    }
+  }
+
+  @media (min-width: 1600px)  {
+    .section-title {
+      width: calc(25% - 0.375em);
+      width: 25%;
+    }
+
+    .section-content {
+      /* includes middle cutter */
+      width: calc(75% - 0.375em);
+      width: 75%;
+    }
+
+    .workexp {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .workexp + .workexp {
+      border-top: 2px solid currentColor;
+      padding-top: 1.5em;
+    }
+
+    /* .section-title {background-color: rgba(255, 255, 255, 1);}
+    .workplace     {background-color: rgba(255, 255, 255, 0.85);}
+    .jobtitle      {background-color: rgba(255, 255, 255, 0.6);}
+    .projects      {background-color: rgba(255, 255, 255, 0.3);} */
+
+    .jobtitle,
+    .projects li,
+    .projects::before {
+      margin-left: 0;
+    }
+
+    .workplace,
+    .jobtitle,
+    .projects,
+    .about-content {
+      width: 100%;
+      /* width: calc(100% - 0.375em); */
+      /* margin: 0 0.375em; */
+      /* padding-left: 0.375em; */
+      padding-right: 0.75em;
+    }
+
+    .projects::before {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    .break {
+      display: block;
+    }
+  }
