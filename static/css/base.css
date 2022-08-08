@@ -18,10 +18,11 @@
 
 body {
   color: var(--text);
-  font: 4.5vw/1.2 "freight-sans-pro", "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, 'helvetica neue', helvetica, sans-serif;
-  /* letter-spacing: 0.04em; */
-  font-weight: 500;
+  font: 4.5vw/1.2 neue-haas-grotesk-text, "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, 'helvetica neue', helvetica, sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 400;
   font-style: normal;
+  font-feature-settings: "ss01" 1; 
   background: var(--bg);
   hyphens: auto;
   text-rendering: optimizeLegibility;
@@ -48,11 +49,9 @@ a[href*="//"]:not([href*="jckfa.com"])::after {
   content: "↗";
   text-decoration: none;
   display: inline-block;
-  /* position: relative;
-  top: -0.5em;
-  margin-right: -0.5em;
+  position: relative;
+  top: -0.3em;
   font-size: 75%;
-  font-weight: bold; */
 }
 
 i {
@@ -98,7 +97,7 @@ h1 {
   border: none;
   box-sizing: border-box;
   border-radius: var(--radius);
-  padding: calc(var(--btn-pad) - 0.1em) var(--margin) var(--btn-pad);
+  padding: var(--btn-pad) var(--margin);
   margin: var(--btn-gap);
   border: 2px solid var(--outline);
   background-color: var(--btn);
