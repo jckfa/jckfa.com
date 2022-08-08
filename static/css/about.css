@@ -50,28 +50,36 @@
       margin-left: 1em;
     }
 
-  @media (min-width: 960px)  {
+  @media (min-width: 640px)  {
     .about section {
       flex-direction: row;
     }
 
-    .section-title,
+    .section-title {
+      width: 25%;
+    }
+
     .section-content {
-      /* includes middle cutter */
-      width: calc(50% - 0.375em);
-      /* background-color: red; */
+      width: 75%;
+    }
+  }
+
+  @media (min-width: 960px)  {
+    .section-title {
+      width: 33.333%;
+    }
+
+    .section-content {
+      width: 66.666%;
     }
   }
 
   @media (min-width: 1600px)  {
     .section-title {
-      width: calc(25% - 0.375em);
       width: 25%;
     }
 
     .section-content {
-      /* includes middle cutter */
-      width: calc(75% - 0.375em);
       width: 75%;
     }
 
