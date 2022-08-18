@@ -63,23 +63,23 @@ i {
 }
 
 main {
-  padding: 0.375em calc(var(--margin) - 0.25em);
+  /* padding: 0.375em calc(var(--margin) - 0.25em); */
+  padding: 0 calc(var(--margin) - 0.25em);
   /* background-color: green; */
   box-sizing: border-box;
 }
 
 main p {
-  max-width: 35em;
+  max-width: 44em;
   /* background-color: green; */
 }
 
 h1 {
-  font-size: 3em;
-  line-height: 1;
-  /* background-color: green; */
-  text-align: center;
-  margin-bottom: 1.5em;
+  font-size: 1.5em;
 }
+
+@media (min-width: 960px) {h1 {font-size: 2em;}}
+@media (min-width: 1920px) {h1 {font-size: 2.5em;}}
 
 /* h3 {
   font-size: 1.5em;
@@ -95,7 +95,6 @@ h1 {
   font-family: inherit;
   line-height: inherit;
   border: none;
-  box-sizing: border-box;
   border-radius: var(--radius);
   padding: var(--btn-pad) var(--margin);
   margin: var(--btn-gap);

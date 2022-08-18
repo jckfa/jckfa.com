@@ -1,47 +1,32 @@
 {% extends "project.html" %}
+{% set title = "Home Depot Lumber Dept. T-Shirt" %}
 {% set base_url = "img/" + project + "/" %}
 {% set hero = "front_Lumber+T-Shirt_Lumber+T-Shirt_2021_apparel_01.jpg" %}
+{% set L = "_Lumber+T-Shirt_Lumber+T-Shirt+Research_2021_apparel+process_0" %}
+
+{% set img_list = [
+  "source_typography_01",
+  "source_typography_02",
+  "source_typography_03"
+] %}
 
 {% block head %}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 {{ super() }}
-<style>
-  .hero {background-image: url('{{url_for("static", filename=base_url + hero)}}');}
-</style>
+<link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
 {% endblock %}
 
 {% block content %}
-<div class="hero"></div>
+<div class="col-wrapper">
+  <div class="col project-description" onClick="more(this)">
+    <p>
+      I worked in the lumber department of my local Home Depot for a couple of months. During that time the word “lumberdog” came up. I thought it’d be cool to print that on a t-shirt in big, powerful letterforms typical of 19th century poster typography. That’s where this project started. I made these tees and gifted them to seven of my coworkers on my last day at work. Detailed below is the design and production process.
+    </p>
 
-<div class="positioner">
-  <p>
-    I worked in the lumber department of my local Home Depot for a couple of months. During that time the word “lumberdog” came up. I thought it’d be cool to print that on a t-shirt in big, powerful letterforms typical of 19th century poster typography. That’s where this project started. I made these tees and gifted them to seven of my coworkers on my last day at work. Detailed below is the design and production process.
-  </p>
-</div>
+    <p>
+      Authencity drove my design decisions throughout this project. For choice of typeface, I wanted to avoid the trendy and ostentatious, and instead go for something honest and reliable and reserved. I knew the type was already going to be visually loud given its expected size so I didn't want to add any more bells and whistles.
+    </p>
 
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Research+(letters)_2021_apparel+process.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Research+(numbers)_2021_apparel+process.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Research+(numbers)_2021_apparel+process_02.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <p>
-    Authencity drove my design decisions throughout this project. For choice of typeface, I wanted to avoid the trendy and ostentatious, and instead go for something honest and reliable and reserved. I knew the type was already going to be visually loud given its expected size so I didn't want to add any more bells and whistles.
-  </p>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockups_2021_apparel+process.gif")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <div>
     <p>
       I made multiple physical 1:1 scale mockups testing content and composition. One of my coworkers didn’t like the idea of being called a dog, including the lumber kind. I settled on the shorter “LUMBER” as it avoided this issue, allowed for larger type, and expedited fabrication and printing.
     </p>
@@ -53,72 +38,65 @@
     <p>
       Outside the context of the store the shirt speaks a somewhat cryptic language which makes it more interesting.
     </p>
+
+    <p>
+      Once I had the content settled I made another mockup with stencils and spray paint. Wearing the shirt allowed me to see how the letters reacted to the folds of the fabric and the contours of the body. This step in the process was especially important with this design as the letters extended beyond the seams. It was also the best way to judge scale.
+    </p>
+
+    <p>
+      I digitized the characters, making minor adjustments to their design. Honestly, this was somewhat unnecessary as I did the fabrication manually and, thus, could have made these design adjustments on the fly during the cutting process. Having these precise vector outlines would, however, be a necessary step for CNC cutting.
+    </p>
+
+    <p>
+      One-by-one, each block of wood type was manually inked and stamped onto the fabric. While extremely tedious this process yielded a lovely imperfection.
+    </p>
+
+    <p>
+      I made nine shirts in total, all size large. My coworkers seemed to like them.
+    </p>
+
+    <div class="credits">
+      <p>Design, fabrication, documentation: Jack Fahnestock</p>
+    </div>
+  </div>
+
+  <div class="col project-images">
+    <img src='{{url_for("static", filename=base_url + "shirt_front.jpg")}}' alt=""/>
+    <img src='{{url_for("static", filename=base_url + "shirt_back.jpg")}}' alt=""/>
+    <div class="carousel">
+      {% for img in img_list %}
+      <div class="carousel-cell">
+        <img src='{{url_for("static", filename=base_url + img + ".jpg")}}' alt=""/>
+      </div>
+      {% endfor %}
+    </div>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockups_2021_apparel+process.gif")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Stencils_2021_apparel+process_04.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockup_Sizing_2021_apparel+process_04.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Design_2021_apparel+process_04.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_02.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_03.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_04.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "front_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_02.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+Detail_2021_apparel+process.jpg")}}' alt=""/>
+
+    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+In-Situ_2021_apparel+process.jpg")}}' alt=""/>
   </div>
 </div>
+{% endblock %}
 
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Stencils_2021_apparel+process_04.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockup_Sizing_2021_apparel+process_04.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <p>
-    Once I had the content settled I made another mockup with stencils and spray paint. Wearing the shirt allowed me to see how the letters reacted to the folds of the fabric and the contours of the body. This step in the process was especially important with this design as the letters extended beyond the seams. It was also the best way to judge scale.
-  </p>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Design_2021_apparel+process_04.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_02.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <p>
-    I digitized the characters, making minor adjustments to their design. Honestly, this was somewhat unnecessary as I did the fabrication manually and, thus, could have made these design adjustments on the fly during the cutting process. Having these precise vector outlines would, however, be a necessary step for CNC cutting.
-  </p>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_03.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_04.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <p>
-    One-by-one, each block of wood type was manually inked and stamped onto the fabric. While extremely tedious this process yielded a lovely imperfection.
-  </p>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+(Front)_2021_apparel+process.jpg")}}' alt=""/>
-
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+(Back)_2021_apparel+process.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner full">
-  <img src='{{url_for("static", filename=base_url + "front_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_02.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+Detail_2021_apparel+process.jpg")}}' alt=""/>
-</div>
-
-<div class="positioner">
-  <p>
-    I made nine shirts in total, all size large. My coworkers seemed to like them.
-  </p>
-</div>
-
-<div class="positioner">
-  <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+In-Situ_2021_apparel+process.jpg")}}' alt=""/>
-</div>
+{% block main %}
+{{ super() }}
+{% include 'includes/_flickity.html' %}
 {% endblock %}

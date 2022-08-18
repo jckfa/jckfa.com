@@ -3,9 +3,9 @@
 }
 
   .about a {
-    line-height: 1;
+    /* line-height: 1; */
     border-radius: 8px;
-    padding: 0 0.225em 0.1em;
+    padding: 0 0.225em;
     margin: 0.075em 0;
   }
 

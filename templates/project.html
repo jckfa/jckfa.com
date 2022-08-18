@@ -14,14 +14,18 @@
 {% endblock %}
 
 {% block main %}
-<div class="page-title">
-  {% if title %}
-  <h1>{{ title }}</h1>
-  {% else %}
-  <h1>{{ hero.split("_")[2].replace("+", " ") }}</h1>
-  {% endif %}
-</div>
 <div class="project">
+  <div class="col-wrapper project-header">
+    <h1 class="col project-year">2021</h1>
+    <h1 class="col project-type">Type Design, Branding</h1>
+    <h1 class="col project-title">
+      {% if title %}
+        {{ title }}
+      {% else %}
+        {{ hero.split("_")[2].replace("+", " ") }}
+      {% endif %}
+    </h1>
+  </div>
   <div class="hero"></div>
   {% block content %}
   {% endblock %}
@@ -43,5 +47,30 @@
     speed: 100,
     easing: 'easeOutCubic'
 });
+</script>
+
+<script>
+  // hide show-more by default
+  window.onload = function() {
+    var x = document.getElementsByClassName('project-description')[0];
+    // more(x)
+    x.classList.toggle('hidden');
+  }
+
+  // toggle show-more visibility
+  function more(x) {
+    // x.classList.toggle('hidden');
+    x.classList.remove('hidden');
+  }
+
+  // window.onscroll = function() {
+  //   var x = document.getElementsByClassName('project-description')[0];
+
+  //   if (document.documentElement.scrollTop > x.offsetTop) {
+  //     x.classList.add("fix-bottom");
+  //   } else {
+  //     x.classList.remove("fix-bottom");
+  //   }
+  // }
 </script>
 {% endblock %}

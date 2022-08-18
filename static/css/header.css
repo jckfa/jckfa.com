@@ -6,7 +6,7 @@ header {
   align-items: center;
   /* background-color: gray; */
   padding: 0 calc(var(--margin) - var(--btn-gap));
-  margin: calc(var(--margin) - var(--btn-gap)) 0 2em;
+  margin: calc(var(--margin) - var(--btn-gap)) 0 4em;
   box-sizing: border-box;
 }
 
@@ -37,6 +37,7 @@ header {
 
 nav, .button-group {
   display: flex;
+  /* column-gap: calc(var(--btn-gap) * 2); */
 }
 
   .active {
