@@ -1,7 +1,9 @@
 {% extends "project.html" %}
 {% set title = "Home Depot Lumber Dept. T-Shirt" %}
+{% set tags = "Type Design, Branding" %}
+{% set year = "2021" %}
 {% set base_url = "img/" + project + "/" %}
-{% set hero = "front_Lumber+T-Shirt_Lumber+T-Shirt_2021_apparel_01.jpg" %}
+{% set hero = "_Lumber+T-Shirt_Lumber+T-Shirt_2021_apparel_01.jpg" %}
 {% set L = "_Lumber+T-Shirt_Lumber+T-Shirt+Research_2021_apparel+process_0" %}
 
 {% set img_list = [
@@ -91,7 +93,7 @@
 
     <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+Detail_2021_apparel+process.jpg")}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+In-Situ_2021_apparel+process.jpg")}}' alt=""/>
+    <img src='{{url_for("static", filename=base_url + "front_Lumber+T-Shirt_Lumber+T-Shirt+Final+In-Situ_2021_apparel+process.jpg")}}' alt=""/>
   </div>
 </div>
 {% endblock %}

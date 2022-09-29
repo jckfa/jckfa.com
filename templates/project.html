@@ -16,13 +16,25 @@
 {% block main %}
 <div class="project">
   <div class="col-wrapper project-header">
-    <h1 class="col project-year">2021</h1>
-    <h1 class="col project-type">Type Design, Branding</h1>
+    <h1 class="col project-year">
+      {% if year %}
+        {{ year }}
+      {% else %}
+        20XX
+      {% endif %}
+    </h1>
+    <h1 class="col project-type">
+      {% if tags %}
+        {{ tags }}
+      {% else %}
+        Untagged
+      {% endif %}
+    </h1>
     <h1 class="col project-title">
       {% if title %}
         {{ title }}
       {% else %}
-        {{ hero.split("_")[2].replace("+", " ") }}
+        Untitled
       {% endif %}
     </h1>
   </div>
