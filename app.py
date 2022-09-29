@@ -22,11 +22,20 @@ def filter_shuffle(seq):
 def filter_capfirst(s):
   return s[:1].upper() + s[1:]
 
-@app.route('/')
-def index():
-  return render_template('index.html')
+# @app.route('/')
+# def index():
+#   return render_template('index.html')
 
-@app.route('/work')
+# @app.route('/work')
+# def work():
+#   path = "static/img/projects"
+#   fname = []
+#   for root, d_names, f_names in os.walk(path):
+#     for f in f_names:
+#       fname.append(os.path.join(root, f))
+#   return render_template('work.html', work_list = fname)
+
+@app.route('/')
 def work():
   path = "static/img/projects"
   fname = []
