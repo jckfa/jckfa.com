@@ -48,6 +48,10 @@ def work():
 def news():
   return render_template('news.html')
 
+@app.route('/shop')
+def shop():
+  return render_template('shop.html')
+
 @app.route('/about')
 def about():
   return render_template('about.html')
