@@ -1,0 +1,13 @@
+{% extends "includes/base.html" %}
+{% set active_page = "news" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/news.css")}}>
+{% endblock %}
+
+{% block main %}
+<div>
+  news
+</div>
+{% endblock %}

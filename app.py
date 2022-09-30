@@ -44,6 +44,10 @@ def work():
       fname.append(os.path.join(root, f))
   return render_template('work.html', work_list = fname)
 
+@app.route('/news')
+def news():
+  return render_template('news.html')
+
 @app.route('/about')
 def about():
   return render_template('about.html')
