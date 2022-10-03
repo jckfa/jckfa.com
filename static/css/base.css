@@ -107,6 +107,7 @@ h1 {
 
   @media (min-width: 960px) {
     .btn:hover, .about a:hover {
+      cursor: pointer;
       background-color: var(--bg);
     }
   }

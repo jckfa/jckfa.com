@@ -8,18 +8,35 @@
 {% set active_page = active_page -%}
 
 <header>
-  <!-- <a class="btn home {% if request.path == '/' %}active{% endif %}" href="/">JCKFA</a> -->
-  <a class="logo" href="/">
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 218 50">
-        <g>
-          <polygon points="189.949,0 161.899,48.585 218,48.585"/>
-          <rect x="136.383" y="1.415" width="23.585" height="47.17"/>
-          <rect x="83.239" y="1.415" width="47.17" height="47.17"/>
-          <circle cx="53.412" cy="25" r="25"/>
-          <rect y="1.415" width="23.585" height="47.17"/>
-        </g>
-    </svg>
-  </a>
+  <div class="logo-and-menu">
+    <a class="logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 218 50">
+          <g>
+            <polygon points="189.949,0 161.899,48.585 218,48.585"/>
+            <rect x="136.383" y="1.415" width="23.585" height="47.17"/>
+            <rect x="83.239" y="1.415" width="47.17" height="47.17"/>
+            <circle cx="53.412" cy="25" r="25"/>
+            <rect y="1.415" width="23.585" height="47.17"/>
+          </g>
+      </svg>
+    </a>
+
+    <div class="menu btn" onClick="toggleMenu()">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+          <rect width="1000" height="100"/>
+          <rect y="450" width="1000" height="100"/>
+          <rect y="900" width="1000" height="100"/>
+        </svg>
+    </div>
+  </div>
+
+  {# if request.path == "/" #}
+  <!-- <div class="button-group filters-button-group">
+    <button class="btn btn-sort is-checked" data-filter="*">All</button>
+    <button class="btn btn-sort" data-filter="._font">Type</button>
+  </div> -->
+  {# endif #}
 
   <nav>
     {% for href, id, title in nav %}
@@ -28,11 +45,17 @@
     </a>
     {% endfor %}
   </nav>
-
-  {% if request.path == "/work" %}
-  <div class="button-group filters-button-group">
-    <button class="btn btn-sort is-checked" data-filter="*">All</button>
-    <button class="btn btn-sort" data-filter="._font">Type</button>
-  </div>
-  {% endif %}
 </header>
+
+<script>
+  // hide menu by default (only on mobile via CSS)
+  window.onload = function() {
+    var x = document.getElementsByTagName('Nav')[0];
+    x.classList.toggle('hidden');
+  }
+
+  function toggleMenu() {
+    var x = document.getElementsByTagName('Nav')[0];
+    x.classList.toggle('hidden');
+  }
+</script>
