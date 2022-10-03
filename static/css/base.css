@@ -92,6 +92,7 @@ h1 {
 
 .btn, .about a {
   color: var(--text);
+  cursor: pointer;
   font-family: inherit;
   line-height: inherit;
   border: none;
@@ -107,7 +108,6 @@ h1 {
 
   @media (min-width: 960px) {
     .btn:hover, .about a:hover {
-      cursor: pointer;
       background-color: var(--bg);
     }
   }
