@@ -39,11 +39,26 @@
     {% endblock %}
   </main>
 
-  {# if request.path != "/" #}
-    {% include 'includes/_footer.html' %}
-  {# endif #}
-  
+  {% include 'includes/_footer.html' %}
+
   {% block scripts %}
   {% endblock %}
+
+  <script>
+    window.onload = function() {
+      var x = document.getElementsByTagName('Nav')[0];
+      var y = document.getElementsByClassName('project-description')[0];
+      // hide menu by default (only on mobile via CSS)
+      x.classList.toggle('hidden-menu');
+      
+      // hide project description by default (only on mobile via CSS)
+      y.classList.toggle('hidden');
+    }
+  
+    function toggleMenu() {
+      var x = document.getElementsByTagName('Nav')[0];
+      x.classList.toggle('hidden-menu');
+    }
+  </script>
 </body>
 </html>
