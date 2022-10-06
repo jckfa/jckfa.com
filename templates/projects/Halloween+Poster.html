@@ -1,0 +1,35 @@
+{% extends "project.html" %}
+{% set title = "Halloween Poster" %}
+{% set tags = "Untagged" %}
+{% set year = "20XX" %}
+{% set base_url = "img/" + project + "/" %}
+{% set hero = "front_Halloween+Poster_Halloween+Poster_2019_poster_01.gif" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
+{% endblock %}
+
+{% block content %}
+<div class="col-wrapper">
+  <div class="col project-description" onClick="more(this)">
+    <p>
+      <i>Documentation write-up not yet added.</i>
+    </p>
+
+    <!-- <div class="credits">
+      <p>Design, screen-printing, documentation: Jack Fahnestock.</p>
+    </div> -->
+  </div>
+
+  <div class="col project-images">
+    <img src='{{url_for("static", filename=base_url + "_Halloween+Poster_Halloween+Poster_2019_poster_02.jpg")}}' alt=""/>
+  </div>
+</div>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% include 'includes/_flickity.html' %}
+{% endblock %}
