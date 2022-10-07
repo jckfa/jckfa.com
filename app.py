@@ -64,6 +64,10 @@ def contact():
 def project(project):
   return render_template('projects/' + project + '.html', project = project)
 
+@app.route('/products/<product>')
+def product(product):
+  return render_template('products/' + product + '.html', product = product)
+
 @app.errorhandler(404)
 def page_not_found(error):
   return render_template('error.html'), 404

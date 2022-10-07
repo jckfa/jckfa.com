@@ -1,0 +1,31 @@
+{% extends "product.html" %}
+{% set title = "Feeeels Fuzzy Typeface" %}
+{% set tags = "Untagged" %}
+{% set year = "20XX" %}
+<!-- {% set base_url = "img/" + product + "/" %} -->
+{% set hero = "1.png" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
+{% endblock %}
+
+{% block content %}
+<div class="col-wrapper">
+  <div class="col project-description" onClick="more(this)">
+    <p>
+      <i>Documentation write-up not yet added.</i>
+    </p>
+  </div>
+
+  <div class="col project-images">
+    <img src='{{url_for("static", filename=base_url + "1.png")}}' alt=""/>
+  </div>
+</div>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% include 'includes/_flickity.html' %}
+{% endblock %}
