@@ -21,9 +21,8 @@
     max-width: none;
   }
 
-  .notice a {
+  .notice .btn-lite {
     color: inherit;
-    padding: 0 0.225em;
     background-color: var(--accent-btn);
     border-color: var(--accent-outline);
   }

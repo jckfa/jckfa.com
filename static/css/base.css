@@ -91,7 +91,7 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-.btn, .about a {
+.btn, .btn-lite, .about a {
   color: var(--text);
   cursor: pointer;
   font-family: inherit;
@@ -106,6 +106,10 @@ h1 {
   text-decoration: none;
   transition: background-color 100ms ease-in-out;
 }
+
+  .btn-lite {
+    padding: 0 0.225em;
+  }
 
   @media (min-width: 960px) {
     .btn:hover, .about a:hover {
