@@ -2,7 +2,6 @@
 {% set title = "AS Thermal Font Production" %}
 {% set tags = "Untagged" %}
 {% set year = "20XX" %}
-{% set base_url = "img/" + project + "/" %}
 {% set hero = "front_AS+Thermal_Shoplifters+10+AS+Thermal_2021_font.png" %}
 
 {% block head %}
@@ -24,7 +23,7 @@
   </div>
 
   <div class="col project-images">
-    <img src='{{url_for("static", filename=base_url + "_AS+Thermal_Shoplifters+10+AS+Thermal+(pp.+684-685)_2021_book+font.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_AS+Thermal_Shoplifters+10+AS+Thermal+(pp.+684-685)_2021_book+font.jpg"}}' alt=""/>
   </div>
 </div>
 {% endblock %}

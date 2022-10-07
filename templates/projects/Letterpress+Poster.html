@@ -2,7 +2,6 @@
 {% set title = "Letterpress Poster" %}
 {% set tags = "Untagged" %}
 {% set year = "20XX" %}
-{% set base_url = "img/" + project + "/" %}
 {% set hero = "front_Letterpress+Poster_Untitled_2018_poster_01.jpg" %}
 
 {% block head %}
@@ -24,7 +23,7 @@
   </div>
 
   <div class="col project-images">
-    <img src='{{url_for("static", filename=base_url + "front_Letterpress+Poster_Untitled_2018_poster_01.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "front_Letterpress+Poster_Untitled_2018_poster_01.jpg"}}' alt=""/>
   </div>
 </div>
 {% endblock %}

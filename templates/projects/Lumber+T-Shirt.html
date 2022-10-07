@@ -2,7 +2,6 @@
 {% set title = "Home Depot Lumber Dept. T-Shirt" %}
 {% set tags = "Type Design, Branding" %}
 {% set year = "2021" %}
-{% set base_url = "img/" + project + "/" %}
 {% set hero = "_Lumber+T-Shirt_Lumber+T-Shirt_2021_apparel_01.jpg" %}
 {% set L = "_Lumber+T-Shirt_Lumber+T-Shirt+Research_2021_apparel+process_0" %}
 
@@ -22,6 +21,10 @@
 <div class="col-wrapper">
   <div class="col project-description" onClick="more(this)">
     <p>
+      <i>Documentation write-up not yet added.</i>
+    </p>
+
+    <!-- <p>
       I worked in the lumber department of my local Home Depot for a couple of months. During that time the word “lumberdog” came up. I thought it’d be cool to print that on a t-shirt in big, powerful letterforms typical of 19th century poster typography. That’s where this project started. I made these tees and gifted them to seven of my coworkers on my last day at work. Detailed below is the design and production process.
     </p>
 
@@ -55,7 +58,7 @@
 
     <p>
       I made nine shirts in total, all size large. My coworkers seemed to like them.
-    </p>
+    </p> -->
 
     <div class="credits">
       <p>Design, fabrication, documentation: Jack Fahnestock</p>
@@ -63,39 +66,39 @@
   </div>
 
   <div class="col project-images">
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+(Front)_2021_apparel+process.jpg")}}' alt=""/>
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+(Back)_2021_apparel+process.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+(Front)_2021_apparel+process.jpg"}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Final+(Back)_2021_apparel+process.jpg"}}' alt=""/>
     <div class="carousel">
       {% for img in img_list %}
       <div class="carousel-cell">
-        <img src='{{url_for("static", filename=base_url + img + ".jpg")}}' alt=""/>
+        <img src='{{img_url + base_url + img + ".jpg"}}' alt=""/>
       </div>
       {% endfor %}
     </div>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockups_2021_apparel+process.gif")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockups_2021_apparel+process.gif"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Stencils_2021_apparel+process_04.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Stencils_2021_apparel+process_04.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockup_Sizing_2021_apparel+process_04.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Mockup_Sizing_2021_apparel+process_04.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Design_2021_apparel+process_04.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Design_2021_apparel+process_04.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_02.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_02.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_03.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_03.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_04.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Production_2021_apparel+process_04.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "front_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_01.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "front_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_01.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_02.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_02.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_03.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "_Lumber+T-Shirt_Lumber+T-Shirt+Detail_2021_apparel_03.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "front_Lumber+T-Shirt_Lumber+T-Shirt+Final+In-Situ_2021_apparel+process.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "front_Lumber+T-Shirt_Lumber+T-Shirt+Final+In-Situ_2021_apparel+process.jpg"}}' alt=""/>
   </div>
 </div>
 {% endblock %}

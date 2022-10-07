@@ -2,7 +2,6 @@
 {% set title = "Shoplifters 10 Interview with Nick Benson" %}
 {% set tags = "Miscellaneous" %}
 {% set year = "2021" %}
-{% set base_url = "img/" + project + "/" %}
 {% set hero = "front_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+386-387)_2021_book+journalism.jpg" %}
 {% set L = "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+" %}
 {% set R = ")_2021_book+journalism.jpg" %}
@@ -57,7 +56,7 @@
     <div class="carousel">
       {% for img in img_list %}
       <div class="carousel-cell">
-        <img src='{{url_for("static", filename=base_url + img + R)}}' alt=""/>
+        <img src='{{img_url + base_url + img + R}}' alt=""/>
       </div>
       {% endfor %}
     </div>

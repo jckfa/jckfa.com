@@ -2,7 +2,6 @@
 {% set title = "Tessa" %}
 {% set tags = "Untagged" %}
 {% set year = "20XX" %}
-{% set base_url = "img/" + project + "/" %}
 {% set hero = "front_Tessa_Tessa+Restaurant+Menus+Fronts_2017_menu_01.jpg" %}
 
 {% block head %}
@@ -24,9 +23,9 @@
   </div>
 
   <div class="col project-images">
-    <img src='{{url_for("static", filename=base_url + "front_Tessa_Tessa+Restaurant+Menus+Fronts_2017_menu_01.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "front_Tessa_Tessa+Restaurant+Menus+Fronts_2017_menu_01.jpg"}}' alt=""/>
 
-    <img src='{{url_for("static", filename=base_url + "Tessa_Tessa+Restaurant+Menus+Backs_2017_menu_01.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "Tessa_Tessa+Restaurant+Menus+Backs_2017_menu_01.jpg"}}' alt=""/>
   </div>
 </div>
 {% endblock %}

@@ -1,5 +1,6 @@
 {% extends "includes/base.html" %}
-{% set base_url = "img/projects/" + project + "/" %}
+{% set base_url = "/projects/" + project + "/" %}
+{% set img_url = "https://img.jckfa.com" %}
 {% set active_page = "work" %}
 
 {% block head %}
@@ -8,7 +9,7 @@
 <!-- <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@2/fullscreen.css"> -->
 <style>
   .hero {
-    background-image: url('{{url_for("static", filename=base_url + hero)}}');
+    background-image: url('https://img.jckfa.com{{base_url + hero}}');
   }
 </style>
 {% endblock %}

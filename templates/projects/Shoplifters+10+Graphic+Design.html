@@ -2,7 +2,6 @@
 {% set title = "Shoplifters 10 Graphic Design" %}
 {% set tags = "Graphic Design" %}
 {% set year = "2021" %}
-{% set base_url = "img/" + project + "/" %}
 {% set hero = "front_Shoplifters+10+Graphic+Design_2021_graphic+design_06.jpg" %}
 {% set L = "_Shoplifters+10+Graphic+Design_2021_graphic+design_" %}
 
@@ -61,7 +60,7 @@
     <div class="carousel">
       {% for img in img_list %}
       <div class="carousel-cell">
-        <img src='{{url_for("static", filename=base_url + img + ".jpg")}}' alt=""/>
+        <img src='{{img_url + base_url + img + ".jpg"}}' alt=""/>
       </div>
       {% endfor %}
     </div>

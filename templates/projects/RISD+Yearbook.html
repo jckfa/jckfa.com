@@ -2,7 +2,6 @@
 {% set title = "RISD Yearbook" %}
 {% set tags = "Untagged" %}
 {% set year = "20XX" %}
-{% set base_url = "img/" + project + "/" %}
 {% set hero = "front_RISD+Yearbook_RISD+Class+of+2020+Yearbook+Back+Cover+Detail_2020_book+font+risd_01.jpg" %}
 
 {% block head %}
@@ -24,7 +23,7 @@
   </div>
 
   <div class="col project-images">
-    <img src='{{url_for("static", filename=base_url + "front_RISD+Yearbook_RISD+Class+of+2020+Yearbook+Spreads_2020_book+risd_02.jpg")}}' alt=""/>
+    <img src='{{img_url + base_url + "front_RISD+Yearbook_RISD+Class+of+2020+Yearbook+Spreads_2020_book+risd_02.jpg"}}' alt=""/>
   </div>
 </div>
 {% endblock %}
