@@ -1,5 +1,6 @@
 .notice {
   /* width: 100%; */
+  color: var(--accent-text);
   background-color: var(--accent-bg);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
@@ -10,14 +11,46 @@
 }
 
   .notice svg {
-    width:  1.5em;
-    height: 1.5em;
+    width:  5em;
+    height: 5em;
     fill: currentColor;
     margin-right: 0.5em;
   }
 
   .notice p {
     max-width: none;
+  }
+
+  .notice a {
+    color: inherit;
+    padding: 0 0.225em;
+    background-color: var(--accent-btn);
+    border-color: var(--accent-outline);
+  }
+
+  @media (min-width: 640px) {
+    .notice svg {
+      width:  3em;
+      height: 3em;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .notice svg {
+      width:  2em;
+      height: 2em;
+    }
+
+    .notice a:hover {
+      background-color: var(--accent-bg);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .notice svg {
+      width:  1.5em;
+      height: 1.5em;
+    }
   }
 
 .grid {

@@ -6,6 +6,7 @@
 
   --accent-text:    hsl(60, 100%, 15%);
   --accent-outline: hsl(60, 100%, 25%);
+  --accent-btn:     hsl(60, 100%, 45%);
   --accent-bg:      hsl(60, 100%, 50%);
   
   --anim: cubic-bezier(0, 1, 0.5, 1.3);
