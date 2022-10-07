@@ -109,6 +109,7 @@ h1 {
 
   .btn-lite {
     padding: 0 0.225em;
+    border-radius: calc(var(--radius) / 2);
   }
 
   @media (min-width: 960px) {

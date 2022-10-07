@@ -4,7 +4,7 @@
 
   .about a {
     /* line-height: 1; */
-    border-radius: 8px;
+    border-radius: calc(var(--radius) / 2);
     padding: 0 0.225em;
     margin: 0.075em 0;
   }
