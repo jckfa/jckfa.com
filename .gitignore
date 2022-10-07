@@ -8,3 +8,4 @@ getting-started/*
 .DS_Store
 client_secret.json
 __pycache__
+static/img
