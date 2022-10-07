@@ -16,6 +16,10 @@
     margin-right: 0.5em;
   }
 
+  .notice p {
+    max-width: none;
+  }
+
 .grid {
   width: 100%;
   /* background-color: red; */
