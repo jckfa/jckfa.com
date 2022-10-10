@@ -2,9 +2,9 @@ from flask import Flask, render_template, url_for, abort
 import random, os
 # import pandas as pd
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 
-if __name__ == "__main__":
+if __name__ == '__main__':
   app.run(host='0.0.0.0')
 
 @app.template_filter('shuffle')
