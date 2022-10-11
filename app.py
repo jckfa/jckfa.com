@@ -60,7 +60,7 @@ def about():
 def contact():
   return render_template('contact.html')
 
-@app.route('/<project>')
+@app.route('/projects/<project>')
 def project(project):
   return render_template('projects/' + project + '.html', project = project)
 
