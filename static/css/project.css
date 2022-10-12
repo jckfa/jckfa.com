@@ -25,7 +25,7 @@
 
   @media (min-width: 960px)  {    
     .project-title {
-      flex: 2 0;
+      flex: 3 0;
     }
 
     .project-description {
