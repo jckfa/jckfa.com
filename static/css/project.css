@@ -99,22 +99,9 @@
     .hero {
       height: 80vh;
     }
-
-    .project-description {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-    }
   }
 
-  /* .project-description {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    align-self: flex-start;
-  } */
-
-  @media (max-width: 960px)  {
+  /* @media (max-width: 960px)  {
     .project-description {
       max-height: 500em;
       transition: max-height 500ms ease-in-out;
@@ -123,7 +110,6 @@
     .hidden {
       max-height: 20em;
       overflow: hidden;
-      /* background-color: gray; */
       position: relative;
     }
 
@@ -149,7 +135,7 @@
         transform: translateX(-50%);
         cursor: pointer;
       }
-  }
+  } */
 
   /* .fix-top {
     color: red;
