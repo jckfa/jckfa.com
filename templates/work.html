@@ -22,7 +22,7 @@
       <div class="grid-item {% for tag in path.split('/')[-1].split('_')[4].split('+') %}_{{ tag }} {% endfor %}">
         <a href="/projects/{{path.strip('/static/img/projects/').split('/')[-1].split('_')[1]}}">
           <img src="https://img.jckfa.com{{path.replace('static/img', '')}}" alt=""/>
-          <div class="caption">{{path.split('/')[-1].split('_')[2].replace('+', ' ')}}</div>
+          <div class="caption">{{path.split('/')[3].replace('+', ' ')}}</div>
         </a>
       </div>
       {% endif %}
