@@ -1,0 +1,34 @@
+{% extends "project.html" %}
+{% set title = "AS Thermal Typeface" %}
+{% set tags = "Untagged" %}
+{% set year = "20XX" %}
+{% set hero = "hero.png" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
+{% endblock %}
+
+{% block content %}
+<div class="col-wrapper">
+  <div class="col project-description" onClick="more(this)">
+    <p>
+      <i>Documentation write-up not yet added.</i>
+    </p>
+
+    <!-- <div class="credits">
+      <p>Design, screen-printing, documentation: Jack Fahnestock.</p>
+    </div> -->
+  </div>
+
+  <div class="col project-images">
+    <img src='{{img_url + base_url + "_AS+Thermal+Typeface_Shoplifters+10+AS+Thermal+(pp.+684-685)_2021_book+font.jpg"}}' alt=""/>
+  </div>
+</div>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% include 'includes/_flickity.html' %}
+{% endblock %}

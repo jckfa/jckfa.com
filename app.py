@@ -62,11 +62,16 @@ def contact():
 
 @app.route('/projects/<project>')
 def project(project):
-  return render_template('projects/' + project + '.html', project = project)
+  path = "static/img/projects/" + project
+  fname = []
+  for root, d_names, f_names in os.walk(path):
+    for f in f_names:
+      fname.append(os.path.join(root, f))
+  return render_template('projects/' + project + '.html', project = project, work_list = fname)
 
-@app.route('/products/<product>')
-def product(product):
-  return render_template('products/' + product + '.html', product = product)
+# @app.route('/products/<product>')
+# def product(product):
+#   return render_template('products/' + product + '.html', product = product)
 
 @app.errorhandler(404)
 def page_not_found(error):

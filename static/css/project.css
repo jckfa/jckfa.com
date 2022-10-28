@@ -1,8 +1,24 @@
 .project-header {
-  color: var(--accent-text);
-  background-color: var(--accent-bg);
-  padding: var(--margin);
+  padding-bottom: calc(var(--margin) * 3);
 }
+
+.project .grid-item {
+  width: 100%;
+  padding: 0.125em 0.25em;
+  margin-bottom: 0.5em;
+  box-sizing: border-box;
+}
+
+  @media (min-width: 640px)  {.project .grid-item {width: 50%}}
+  @media (min-width: 960px)  {.project .grid-item {width: 33.333%}}
+  @media (min-width: 1280px) {.project .grid-item {width: 25%}}
+  /* @media (min-width: 1600px) {.project .grid-item {width: 20%}} */
+  /* @media (min-width: 1920px) {.project .grid-item {width: 16.666%}} */
+  /* @media (min-width: 2240px) {.project .grid-item {width: 14.2857%}} */
+
+  .grid-item a {
+    text-decoration: none;
+  }
 
 .col-wrapper {
   display: flex;
@@ -11,6 +27,7 @@
   column-gap: 0.5em;
   row-gap: 1em;
   margin: 0 0.25em;
+  /* background-color: green; */
 }
 
   .col {
@@ -51,12 +68,18 @@
 
   .hero {
     /* 4/5 ratio */
-    height: calc(125vw - 0.75em * 2);
+    height: 2em;
     background-size: contain;
     background-position: center;
     /* background-color: red; */
     margin: 0 0.25em 4em;
   }
+
+    @media (min-width: 960px)  {
+      .hero {
+        height: 4em;
+      }
+    }
 
     .col img {
       max-width: 100%;
@@ -82,64 +105,19 @@
   }
 
   .credits {
+    text-align: center;
     font-style: italic;
-    /* border-top: 2px solid currentColor; */
-    /* padding-top: 1em; */
-    /* padding-left: 2em; */
+    /* background-color: white; */
   }
 
-    .credits:before {
+    .credits p {
+      max-width: 30em;
+      margin: 0 auto;
+    }
+
+    /* .credits:before {
       content: "* * *";
       text-transform: uppercase;
       padding: 1em 0 0.75em;
       display: block;
-    }
-
-  @media (min-width: 960px)  {
-    .hero {
-      height: 80vh;
-    }
-  }
-
-  /* @media (max-width: 960px)  {
-    .project-description {
-      max-height: 500em;
-      transition: max-height 500ms ease-in-out;
-    }
-
-    .hidden {
-      max-height: 20em;
-      overflow: hidden;
-      position: relative;
-    }
-
-      .hidden:before {
-        content: '';
-        width: 100%;
-        height: 100%;    
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(transparent 50%, var(--bg));
-      }
-
-      .hidden:after {
-        content: "More";
-        background-color: var(--btn);
-        border-radius: 100px;
-        border: 2px solid var(--outline);
-        padding: var(--btn-pad) calc(var(--margin) * 1.25);
-        position: absolute;
-        bottom: 0.5em;
-        left: 50%;
-        transform: translateX(-50%);
-        cursor: pointer;
-      }
-  } */
-
-  /* .fix-top {
-    color: red;
-    position: fixed;
-    top: 0;
-    left: 0;
-  } */
+    } */

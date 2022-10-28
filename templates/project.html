@@ -1,50 +1,48 @@
 {% extends "includes/base.html" %}
 {% set base_url = "/projects/" + project + "/" %}
-{% set img_url = "https://img.jckfa.com" %}
+{# set img_url = "https://img.jckfa.com" #}
 {% set active_page = "work" %}
 
 {% block head %}
 {{ super() }}
+<link rel="stylesheet" href={{url_for("static", filename="css/work.css")}}>
 <link rel="stylesheet" href={{url_for("static", filename="css/project.css")}}>
-<!-- <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@2/fullscreen.css"> -->
-<style>
-  .hero {
-    background-image: url('https://img.jckfa.com{{base_url + hero}}');
-  }
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 {% endblock %}
 
 {% block main %}
 <div class="project">
-  <div class="col-wrapper project-header">
-    <h1 class="col project-year">
-      {% if year %}
-        {{ year }}
-      {% else %}
-        20XX
-      {% endif %}
-    </h1>
-    <!-- <h1 class="col project-type">
-      {% if tags %}
-        {{ tags }}
-      {% else %}
-        Untagged
-      {% endif %}
-    </h1> -->
-    <h1 class="col project-title">
+  <div class="project-header">
+    <h1 class="project-title">
       {% if title %}
         {{ title }}
       {% else %}
         Untitled
       {% endif %}
     </h1>
+    <!-- <div class="hero"></div> -->
   </div>
-  <div class="hero"></div>
-  {% block content %}
-  {% endblock %}
+
+  {# block content #}
+  {# endblock #}
+
+  <div class="grid">
+    {% for path in work_list | shuffle %}
+    {% if ".DS_Store" not in path %}
+    <div class="grid-item">
+      <a class="glightbox" href="{{url_for('static', filename=path.replace('static/', '', 1))}}">
+        <img src="{{url_for('static', filename=path.replace('static/', '', 1))}}" alt=""/>
+      </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  {# block credits #}
+  {# endblock #}
 
   <div class="totop">
-    <a class="btn notice" href="#top">
+    <a class="btn" href="#top">
       Back to top
     </a>
   </div>
@@ -53,13 +51,28 @@
 
 {% block scripts %}
 <!-- smooth scrolling-->
+<script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
   var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 100,
     easing: 'easeOutCubic'
-});
+  });
+
+  // init Packery
+  var grid = document.querySelector('.grid');
+  var pckry = new Packery(grid, {
+    itemSelector: '.grid-item',
+    percentPosition: true
+  });
+
+  // layout Packery after each image loads
+  imagesLoaded(grid).on('progress', function () {
+    pckry.layout();
+  });
 </script>
 
 <script>
@@ -78,5 +91,11 @@
   //     x.classList.remove("fix-bottom");
   //   }
   // }
+
+  // https://github.com/biati-digital/glightbox
+  const lightbox = GLightbox({
+    loop: true,
+    autoplayVideos: true
+  });
 </script>
 {% endblock %}

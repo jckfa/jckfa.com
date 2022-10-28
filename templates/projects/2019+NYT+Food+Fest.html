@@ -1,0 +1,30 @@
+{% extends "project.html" %}
+{% set title = "2019 New York Times Food Festival" %}
+{% set tags = "Publication Design" %}
+{% set year = "2019" %}
+{% set hero = "front_2019+NYT+Food+Fest_NYT+Food+Festival+Print+Matter_2019_newspaper_01.jpg" %}
+
+{% block content %}
+<div class="col project-description" onClick="more(this)">
+  <p>
+    In collaboration with <a href="https://josephhan.com/" target="_blank">Joseph Han</a> at <a href="https://www.basedesign.com/" target="_blank">Base Design NYC</a> Jack worked on the <a href="https://www.basedesign.com/work/the-new-york-times-food-festival" target="_blank">branding campaign</a> for The New York Times’ inaugural Food Festival, creating email templates, newspaper and magazine ads, and animated social media assets.
+  </p>
+
+  <div class="credits">
+    <p>Letterform design: Joseph Han with optical refinements by Jack. Newsprint matter design: Jack</p>
+    <p>Images courtesy of <a href="https://www.basedesign.com/" target="_blank">Base Design NYC</a></p>
+  </div>
+  
+</div>
+{% endblock %}
+
+{% block credits %}
+  <div class="credits">
+    <p>Letterform design: Joseph Han with optical refinements by Jack Fahnestock. Newsprint matter design: Jack Fahnestock</p>
+    <p>Images courtesy of <a href="https://www.basedesign.com/" target="_blank">Base Design NYC</a></p>
+  </div>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% endblock %}
