@@ -30,8 +30,9 @@
     {% for path in work_list | shuffle %}
     {% if ".DS_Store" not in path %}
     <div class="grid-item">
-      <a class="glightbox" href="{{url_for('static', filename=path.replace('static/', '', 1))}}">
-        <img src="{{url_for('static', filename=path.replace('static/', '', 1))}}" alt=""/>
+      <a class="glightbox" href="https://img.jckfa.com{{url_for('static', filename=path.replace('static/', '', 1)) | replace('/static/img', '')}}">
+        <!-- <img src="{{url_for('static', filename=path.replace('static/', '', 1))}}" alt=""/> -->
+        <img src="https://img.jckfa.com{{url_for('static', filename=path.replace('static/', '', 1)) | replace('/static/img', '')}}" alt=""/>
       </a>
     </div>
     {% endif %}
