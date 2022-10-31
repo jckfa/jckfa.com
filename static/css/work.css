@@ -60,7 +60,7 @@
 .grid-item {
   width: 100%;
   padding: 0.125em 0.25em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
   box-sizing: border-box;
 }
 
@@ -83,6 +83,10 @@
   }
 
   @media (min-width: 960px)  {
+    .grid-item {
+      margin-bottom: 0.5em;
+    }
+
     .grid-item:hover {
       z-index: 100;
     }
