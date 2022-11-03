@@ -6,7 +6,7 @@ header {
   align-items: center;
   background-color: var(--bg);
   /* padding: calc(var(--margin) - var(--btn-gap)); */
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   box-sizing: border-box;
   position: relative;
 }
@@ -19,7 +19,7 @@ header {
   justify-content: space-between;
   z-index: 2;
   background-color: var(--bg);
-  padding: calc(var(--margin) - var(--btn-gap));
+  padding: var(--margin);
 }
 
 .logo {
@@ -28,7 +28,7 @@ header {
   line-height: 0.7;
   opacity: 1;
   transition: opacity 100ms ease-in-out;
-  margin: var(--btn-gap);
+  /* margin-left: var(--margin); */
 }
 
   @media (min-width: 960px) {
@@ -108,7 +108,9 @@ nav, .button-group {
     }
 
     .logo-and-menu {
-      padding: 0;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
     }
 
     nav, .button-group {
