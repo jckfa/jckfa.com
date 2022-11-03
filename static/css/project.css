@@ -1,5 +1,5 @@
 .project-header {
-  padding-bottom: calc(var(--margin) * 3);
+  padding: 0 0.25em calc(var(--margin) * 3);
 }
 
 .project .grid-item {
