@@ -1,5 +1,5 @@
-.project-header {
-  padding: 0 0.25em calc(var(--margin) * 3);
+.notice + .project {
+  margin-top: 0.5em;
 }
 
 .project .grid-item {
@@ -25,6 +25,10 @@
       margin-bottom: 0.5em;
     }
   }
+
+.project-header {
+  padding: 0 0.25em calc(var(--margin) * 3);
+}
 
 .col-wrapper {
   display: flex;
