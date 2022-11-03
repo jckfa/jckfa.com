@@ -2,3 +2,11 @@
   text-align: center;
   padding: 0 calc(var(--margin) - 0.5em);
 }
+
+  .news p {
+    margin: 0 auto;
+  }
+
+  .news p + p {
+    margin-top: 0.75em;
+  }
