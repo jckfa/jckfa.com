@@ -4,66 +4,19 @@
 {% set year = "2020" %}
 {% set hero = "exterior_3.jpg" %}
 
-{% set img_list = [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-] %}
-
 {% block head %}
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 {{ super() }}
 <link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
 {% endblock %}
 
-{% block content %}
-<div class="col-wrapper">
-  <div class="col project-description" onClick="more(this)">
-    <p>
-      Jack collaborated with the 2020 <a href="https://risdguild.com/" target="_blank">RISD Design Guild</a> team on the RISD Class of 2020 Yearbook.
-    </p>
+{% block description %}
+<p>
+  Jack collaborated with the 2020 <a href="https://risdguild.com/" target="_blank">RISD Design Guild</a> team on the RISD Class of 2020 Yearbook. He also created a "2020" version of the official/alternate RISD seal originally designed by John Howard Benson, which is featured on the back of the book.
+</p>
 
-    <p>
-      He also created a "2020" version of the official/alternate RISD seal originally designed by John Howard Benson, which is featured on the back of the book.
-    </p>
-
-    <div class="credits">
-      <p>Design: Jennifer Joung, Jack Halten Fahnestock, Tiger Dingsun, Corinne Ang</p>
-      <p>Photography: Anita Qian, Caius Chew, Mati Gavasheli, Josiah Gill, Alvin Yu, Isabel Fernandez-Pujol</p>
-      <p>Additional Help: Julie Alter, Labelle Chang, Madi Ko, Minji Koo, Soleil Singh, Amanda Yang</p>
-    </div>
-  </div>
-
-  <div class="col project-images">    
-    <img src='{{img_url + base_url + "exterior_3.jpg"}}' alt=""/>
-
-    <img src='{{img_url + base_url + "exterior_1.jpg"}}' alt=""/>
-    
-    <img src='{{img_url + base_url + "front_RISD+Yearbook_RISD+Class+of+2020+Yearbook+Back+Cover+Detail_2020_book+font+risd_01.jpg"}}' alt=""/>
-
-    <img src='{{img_url + base_url + "seal_2020.png"}}' alt=""/>
-
-    <img src='{{img_url + base_url + "seal_reference.jpg"}}' alt=""/>
-
-    <img src='{{img_url + base_url + "front_RISD+Yearbook_RISD+Class+of+2020+Yearbook+Spreads_2020_book+risd_02.jpg"}}' alt=""/>
-
-    <div class="carousel">
-      {% for img in img_list %}
-      <div class="carousel-cell">
-        <img src='{{img_url + base_url + "spreads/" + img + ".jpg"}}' alt=""/>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+<div class="credits">
+  <p>DESIGN: Jennifer Joung, Jack Halten Fahnestock, Tiger Dingsun, Corinne Ang. PHOTOGRAPHY: Anita Qian, Caius Chew, Mati Gavasheli, Josiah Gill, Alvin Yu, Isabel Fernandez-Pujol. ADDITIONAL HELP: Julie Alter, Labelle Chang, Madi Ko, Minji Koo, Soleil Singh, Amanda Yang</p>
 </div>
 {% endblock %}
 
