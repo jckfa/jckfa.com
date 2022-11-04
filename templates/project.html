@@ -22,8 +22,10 @@
       {% endif %}
     </h1>
     
-    {% block content %}
-    {% endblock %}
+    <div class="project-description" onClick="more(this)">
+      {% block description %}
+      {% endblock %}
+    </div>
   </div>
 
   <div class="grid">
@@ -38,9 +40,6 @@
     {% endif %}
     {% endfor %}
   </div>
-
-  {# block credits #}
-  {# endblock #}
 
   <div class="totop">
     <a class="btn" href="#top">

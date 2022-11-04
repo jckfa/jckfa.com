@@ -115,6 +115,13 @@
       .hero {
         height: 4em;
       }
+
+      .grid-item:hover img {
+        /* transform: scale(1.025); */
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        cursor: zoom-in;
+      }
     }
 
     .col img {
