@@ -21,17 +21,15 @@
         Untitled
       {% endif %}
     </h1>
-    <!-- <div class="hero"></div> -->
-    <div>Description not yet added. Credits not yet added.</div>
+    
+    {% block content %}
+    {% endblock %}
   </div>
-
-  {# block content #}
-  {# endblock #}
 
   <div class="grid">
     {% for path in work_list | shuffle %}
     {% if ".DS_Store" not in path %}
-    <div class="grid-item">
+    <div class="grid-item {% if 'front_' in path %}wider{% endif %}">
       <a class="glightbox" href="https://img.jckfa.com{{url_for('static', filename=path.replace('static/', '', 1)) | replace('/static/img', '')}}">
         <!-- <img src="{{url_for('static', filename=path.replace('static/', '', 1))}}" alt=""/> -->
         <img src="https://img.jckfa.com{{url_for('static', filename=path.replace('static/', '', 1)) | replace('/static/img', '')}}" alt=""/>
@@ -80,20 +78,10 @@
 
 <script>
   // toggle show-more visibility
-  // function more(x) {
-  //   // x.classList.toggle('hidden');
-  //   x.classList.remove('hidden');
-  // }
-
-  // window.onscroll = function() {
-  //   var x = document.getElementsByClassName('project-description')[0];
-
-  //   if (document.documentElement.scrollTop > x.offsetTop) {
-  //     x.classList.add("fix-bottom");
-  //   } else {
-  //     x.classList.remove("fix-bottom");
-  //   }
-  // }
+  function more(x) {
+    x.classList.toggle('hidden');
+    // x.classList.remove('hidden');
+  }
 
   // https://github.com/biati-digital/glightbox
   const lightbox = GLightbox({
