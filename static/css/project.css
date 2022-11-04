@@ -76,6 +76,10 @@
     flex: 1 100%;
   }
 
+  .project-description div + div {
+    margin-top: 1em;
+  }
+
   @media (min-width: 960px)  {    
     .project-title {
       flex: 3 0;

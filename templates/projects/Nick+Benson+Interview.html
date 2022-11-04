@@ -6,25 +6,7 @@
 {% set L = "_Benson+Interview_Shoplifters+10+Interview+with+Nick+Benson+(pp.+" %}
 {% set R = ")_2021_book+journalism.jpg" %}
 
-{% set img_list = [
-  L + "384-385",
-  "front" + L + "386-387",
-  L + "388-389",
-  L + "390-391",
-  L + "392-393",
-  L + "394-395",
-  L + "396-397",
-  L + "398-399",
-  L + "400-401",
-  L + "402-403",
-  L + "404-405",
-  L + "406-407",
-  L + "408-409",
-  L + "410-411",
-  L + "412-413",
-  L + "414-415",
-  L + "416-417",
-] %}
+
 
 {% block head %}
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -32,35 +14,17 @@
 <link rel="stylesheet" href={{url_for("static", filename="css/flickity.css")}}>
 {% endblock %}
 
-{% block content %}
-<div class="col-wrapper">
-  <div class="col project-description" onClick="more(this)">
-    <p>
-      Jack did an interview with <a href="https://www.instagram.com/nixbenson/" target="_blank">Nick Benson</a>, owner and creative director of <a href="https://www.johnstevensshop.com/" target="_blank">The John Stevens Shop</a>, a design and stone-carving business founded in 1705 by John Stevens in Newport, Rhode Island. Nick is the third generation of a family of calligraphers and stone-carvers, and has continued developing his craft for four decades. The discussion explores Nick’s process, his guerrilla art ambitions, and the dark side of social media.
-    </p>
+{% block description %}
+<p>
+  Jack did an interview with <a href="https://www.instagram.com/nixbenson/" target="_blank">Nick Benson</a>, owner and creative director of <a href="https://www.johnstevensshop.com/" target="_blank">The John Stevens Shop</a>, a design and stone-carving business founded in 1705 by John Stevens in Newport, Rhode Island. Nick is the third generation of a family of calligraphers and stone-carvers, and has continued developing his craft for four decades. The discussion explores Nick’s process, his guerrilla art ambitions, and the dark side of social media.
+</p>
 
-    <a class="btn notice" href="https://drive.google.com/file/d/1WY_0QP5XTEc0Y0bmF047a5rKr3Waznua/view?usp=sharing" target="_blank">Full transcript</a>
+<a class="btn" href="https://drive.google.com/file/d/1WY_0QP5XTEc0Y0bmF047a5rKr3Waznua/view?usp=sharing" target="_blank">Full transcript</a>
 
-    <div class="credits">
-      <p>
-        Interview, transcription, copy editing, and image sourcing: Jack Fahnestock. Design: <a href="http://actualsource.work/" target="_blank">Actual Source</a>.
-      </p>
-  
-      <p>
-        Images from the Special Features section “Nick Benson and the John Stevens Shop, In conversation with Jack Fahnestock” of <a href="https://actualsource.org/products/copy-of-shoplifters-10-new-type-design-vol-2" target="_blank">Shoplifters Issue 10: New Type Design Vol. 2</a>, courtesy of <a href="http://actualsource.work/" target="_blank">Actual Source</a>.
-      </p>
-    </div>
-  </div>
-
-  <div class="col project-images">
-    <div class="carousel">
-      {% for img in img_list %}
-      <div class="carousel-cell">
-        <img src='{{img_url + base_url + img + R}}' alt=""/>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+<div class="credits">
+  <p>
+    Interview, transcription, copy editing, and image sourcing: Jack Fahnestock. Design: <a href="http://actualsource.work/" target="_blank">Actual Source</a>. Images from the Special Features section “Nick Benson and the John Stevens Shop, In conversation with Jack Fahnestock” of <a href="https://actualsource.org/products/copy-of-shoplifters-10-new-type-design-vol-2" target="_blank">Shoplifters Issue 10: New Type Design Vol. 2</a>, courtesy of <a href="http://actualsource.work/" target="_blank">Actual Source</a>.
+  </p>
 </div>
 {% endblock %}
 
