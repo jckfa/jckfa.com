@@ -14,8 +14,8 @@
       width: 50%;
     }
 
-    .project .grid-item {
-      width: 50%;
+    .project .wider {
+      width: 100%;
     }
   }
 
