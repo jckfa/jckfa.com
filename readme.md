@@ -2,4 +2,4 @@ Built with Flask, Packery, Flickity. Running on Digital Ocean.
 
 RUN
 `. venv/bin/activate`
-`flask run`
+`FLASK_DEBUG=1 flask run`
