@@ -18,10 +18,11 @@
 }
 
   .notice svg {
-    width:  8em;
-    height: 8em;
-    fill: currentColor;
+    width: 1.6em;
+    height: 1.6em;
+    flex-shrink: 0;
     margin-right: 0.5em;
+    fill: currentColor;
   }
 
   .notice p {
@@ -34,18 +35,18 @@
     border-color: var(--accent-outline);
   }
 
-  @media (min-width: 640px) {
+  /* @media (min-width: 640px) {
     .notice svg {
-      width:  5em;
-      height: 5em;
+      width:  2em;
+      height: 2em;
     }
-  }
+  } */
 
   @media (min-width: 960px) {
-    .notice svg {
+    /* .notice svg {
       width:  3em;
       height: 3em;
-    }
+    } */
 
     .notice a:hover {
       background-color: var(--accent-bg);
@@ -58,14 +59,14 @@
       flex-direction: row;
     }
 
-    .notice {
+    /* .notice {
       width: 50%;
-    }
+    } */
 
-    .notice svg {
-      width:  6rem;
-      height: 6rem;
-    }
+    /* .notice svg {
+      width:  2em;
+      height: 2em;
+    } */
   }
 
 .grid {
