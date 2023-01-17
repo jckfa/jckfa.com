@@ -1,1 +1,0 @@
-Built with Flask, Packery, Flickity. Running on Digital Ocean.
