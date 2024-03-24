@@ -11,7 +11,6 @@
 {% endblock %}
 
 {% block main %}
-{% include 'includes/_notice.html' %}
 <div class="project">
   <div class="project-header">
     <h1 class="project-title">
@@ -21,7 +20,7 @@
         Untitled
       {% endif %}
     </h1>
-    
+
     <div class="project-description" onClick="more(this)">
       {% block description %}
       {% endblock %}
