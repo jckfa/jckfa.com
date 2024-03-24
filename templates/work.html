@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block main %}
-  {% include 'includes/_notice.html' %}
   <div class="grid">
     {% for path in work_list | shuffle %}
       {% if "front" in path.split('/')[-1].split('_')[0] %}
