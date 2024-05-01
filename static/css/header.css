@@ -24,7 +24,7 @@ header {
 
 .logo {
   width: 6em;
-  fill: var(--text);
+  fill: black;
   /* background-color: red; */
   line-height: 0.7;
   opacity: 1;
