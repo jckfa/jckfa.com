@@ -23,7 +23,8 @@ header {
 }
 
 .logo {
-  width: 10em;
+  width: 6em;
+  fill: var(--text);
   /* background-color: red; */
   line-height: 0.7;
   opacity: 1;
@@ -32,6 +33,10 @@ header {
 }
 
   @media (min-width: 960px) {
+    .logo {
+      width: 10em;
+    }
+
     .logo:hover {
       opacity: 0.75;
     }
@@ -53,7 +58,7 @@ nav, .button-group {
 }
 
   .active {
-    background-color: var(--bg);
+    background-color: var(--btn);
   }
 
   .btn-sort {
@@ -103,9 +108,9 @@ nav, .button-group {
   }
 
   @media (max-width: 960px) {
-    .logo-and-menu, nav {
+    /* .logo-and-menu, nav {
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    }
+    } */
 
     .logo-and-menu {
       padding-top: 0;
@@ -126,15 +131,15 @@ nav, .button-group {
     }
 
       nav .btn {
-        padding: 1em;
+        padding: 0.5em;
         margin: 0;
         border-radius: 0;
         border: none;
       }
 
-        nav .btn + .btn {
+        /* nav .btn + .btn {
           border-top: 0.1em solid var(--outline);
-        }
+        } */
 
       .menu.btn {
         margin: 0;
@@ -142,7 +147,7 @@ nav, .button-group {
         border: none;
         border-radius: 0;
         background-color: var(--bg);
-        border-left: 0.1em solid var(--outline);
+        /* border-left: 0.1em solid var(--outline); */
       }
 
     .hidden-menu {

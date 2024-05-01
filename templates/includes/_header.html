@@ -1,7 +1,7 @@
 {% set nav = [
   ('/', 'work', 'Work'),
-  ('https://www.figma.com/proto/TVIyAWB8MK1RcGqnwcmmLb/Portfolio?page-id=274%3A6877&type=design&node-id=560-168144&viewport=869%2C825%2C0.13&t=sv27G6k8ReTdp8ch-1&scaling=contain', 'work-priv', 'Work (Private)'),
-  ('mailto:jackhfahnestock@gmail.com', 'contact', 'Contact')
+  ('https://www.figma.com/proto/TVIyAWB8MK1RcGqnwcmmLb/Portfolio?page-id=274%3A6877&type=design&node-id=560-168144&viewport=869%2C825%2C0.13&t=sv27G6k8ReTdp8ch-1&scaling=contain', 'work-priv', 'Private'),
+  ('mailto:jackhfahnestock@gmail.com', 'contact', 'Email')
 ] -%}
 {% set active_page = active_page -%}
 
@@ -77,7 +77,7 @@
     {% for href, id, title in nav %}
     <a href="{{ href | e }}"
        class="btn{% if id == active_page %} active{% endif %}"
-       {% if 'http' in href %}target="_blank"{% endif %}>
+       {% if 'http' in href or 'mailto' in href %}target="_blank"{% endif %}>
       {{ title | e }}
     </a>
     {% endfor %}

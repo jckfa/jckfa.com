@@ -10,7 +10,7 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  
+
     .footer-links .btn {
       width: calc(100% - var(--btn-gap) * 2);
       text-align: center;
@@ -19,7 +19,7 @@ footer {
   .site-credit {
     text-align: center;
     max-width: 36em;
-    margin: 0.75em auto;
+    margin: 4em auto 2em;
     /* background-color: gray; */
   }
 
@@ -27,7 +27,7 @@ footer {
     .footer-links {
       flex-direction: row;
     }
-    
+
     .footer-links .btn {
       width: calc(50% - var(--btn-gap) * 2);
     }

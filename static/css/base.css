@@ -3,27 +3,30 @@
   --outline: hsl(48, 100%, 30%);
   --btn:     hsl(48, 100%, 45%);
   --bg:      hsl(48, 100%, 50%);
+  /* --text:    hsl(0, 0%, 90%); */
+  /* --btn:     hsl(0, 0%, 24%); */
+  /* --bg:      hsl(0, 0%, 14%); */
 
   --accent-text:    hsl(60, 100%, 15%);
   --accent-outline: hsl(60, 100%, 25%);
   --accent-btn:     hsl(60, 100%, 45%);
   --accent-bg:      hsl(60, 100%, 50%);
-  
+
   --anim: cubic-bezier(0, 1, 0.5, 1.3);
   --x-margin: 0.5em;
   --radius: 12px;
   --margin: 0.75em;
-  --btn-gap: 0.1em; 
+  --btn-gap: 0.1em;
   --btn-pad: 0.5em;
 }
 
 body {
   color: var(--text);
   font: 5.25vw/1.3 neue-haas-grotesk-text, "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, arial, 'helvetica neue', helvetica, sans-serif;
-  letter-spacing: 0.02em;
+  /* letter-spacing: 0.02em; */
   font-weight: 400;
   font-style: normal;
-  font-feature-settings: "ss01" 1; 
+  font-feature-settings: "ss01" 1;
   background: var(--bg);
   hyphens: auto;
   text-rendering: optimizeLegibility;
@@ -43,10 +46,11 @@ body {
 
 a {
   color: currentColor;
-  
+
 }
 
-a[href*="//"]:not([href*="jckfa.com"])::after {
+a[href*="//"]:not([href*="jckfa.com"])::after,
+a[href*="mailto"]::after {
   content: "↗";
   text-decoration: none;
   display: inline-block;
@@ -100,8 +104,8 @@ h1 {
   border-radius: var(--radius);
   padding: var(--btn-pad) var(--margin);
   margin: var(--btn-gap);
-  border: 0.1em solid var(--outline);
-  background-color: var(--btn);
+  /* border: 0.1em solid var(--outline); */
+  /* background-color: var(--btn); */
   display: inline-block;
   text-decoration: none;
   transition: background-color 100ms ease-in-out;
@@ -114,6 +118,6 @@ h1 {
 
   @media (min-width: 960px) {
     .btn:hover, .about a:hover {
-      background-color: var(--bg);
+      background-color: var(--btn);
     }
   }
